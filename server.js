@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
-app.use(cors());
 
 const Contact = require('./models/Contact');
 
@@ -13,6 +12,7 @@ app.use(express.static(path.join(__dirname, '../')));
 
 // Middleware
 app.use(express.json());
+app.use(cors());
 
 
 // Connect to MongoDB Atlas
