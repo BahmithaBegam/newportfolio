@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
+const cors = require('cors');
+app.use(cors());
 
 const Contact = require('./models/Contact');
 
