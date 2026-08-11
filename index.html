@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahmi's Portfolio - Home</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="top-nav">
+    <div class="site-name">
+        ✨ Bahmi's Portfolio
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-menu" id="hamburgerMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="skills.html">Skills and Strength</a>
+        <a href="personal.html">Personal Details</a>
+        <a href="Academic.html">Academic Status</a>
+        <a href="courses.html">Courses Completed</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+    
+
+    <!-- Introduction -->
+    <div class="hero-text">
+        <h1>Hello Guys....</h1>
+        <h1>I'm Bahmitha Begam</h1>
+        <h3>Student of Computer Science and Engineering</h3>
+        <p>Web Developer | Android Application Developer</p>
+
+        <!-- Social Media -->
+        <div class="icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/bahmitha-begam-819504328/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/_bahmi_156?igsh=MXM0bzIweTF0NDB1YQ==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/BahmithaBegam" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+     <!-- Profile Image -->
+    <div class="hero-img">
+        <img src="b1.jpeg" alt="Bahmitha Begam">
+    </div>
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="content">
+    <!-- About Me -->
+    <div class="box">
+        <h2>About Me</h2>
+        <p>
+            I am a student of Anna University Regional Campus
+            in the department of Computer Science and Engineering.
+            I am interested in the field of web development and
+            Java programming, Web Development and Networking.
+        </p>
+    </div>
+
+    <!-- Basic Details -->
+    <div class="box">
+        <h2>Basic Details</h2>
+        <p><b>Email:</b> bahmithabegam@gmail.com</p>
+        <p><b>Mobile:</b> 9659713688</p>
+        <p><b>Address:</b> Madurai, Tamil Nadu</p>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    &copy; 2026 Bahmi | <span id="page-name"></span>
+</footer>
+
+<script>
+    const path = window.location.pathname;
+    let pageTitle = "Home";
+
+    if (path.includes("skills.html")) {
+        pageTitle = "Skills and Strength";
+    } else if (path.includes("personal.html")) {
+        pageTitle = "Personal Details";
+    } else if (path.includes("Academic.html")) {
+        pageTitle = "Academic Status";
+    } else if (path.includes("courses.html")) {
+        pageTitle = "Courses Completed";
+    } else if (path.includes("contact.html")) {
+        pageTitle = "Contact";
+    } else if (path.includes("index.html") || path === "/") {
+        pageTitle = "Home";
+    }
+
+    document.getElementById("page-name").innerText = pageTitle;
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,565 @@
+/* =========================================
+RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+
+
+margin: 0;
+
+font-family:
+    'Segoe UI',
+    Arial,
+    sans-serif;
+
+min-height: 100vh;
+
+ background: linear-gradient(135deg, #2e1065 0%, #3b0764 50%, #1e1b4b 100%);
+
+color: #333;
+
+
+}
+
+/* =========================================
+NAVBAR
+========================================= */
+
+.top-nav {
+
+
+width: 100%;
+
+min-height: 70px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding:
+    15px 30px;
+
+background:
+    linear-gradient(
+        90deg,
+        #7b2ff7,
+        #f107a3,
+        #00c6ff
+    );
+
+box-shadow:
+    0 4px 15px
+    rgba(0,0,0,0.2);
+
+position: sticky;
+
+top: 0;
+
+z-index: 1000;
+
+
+}
+
+/* Portfolio Name */
+
+.site-name {
+
+
+color: white;
+
+font-size: 28px;
+
+font-weight: bold;
+
+
+}
+
+/* Desktop Navigation */
+
+.nav-menu {
+
+
+display: flex;
+
+align-items: center;
+
+gap: 5px;
+
+
+}
+
+.nav-menu a {
+
+
+text-decoration: none;
+
+color: white;
+
+font-size: 14px;
+
+padding:
+    10px 12px;
+
+border-radius: 8px;
+
+transition:
+    0.3s;
+
+
+}
+
+.nav-menu a:hover {
+
+
+background:
+    rgba(255,255,255,0.2);
+
+
+}
+
+.nav-menu a.active {
+
+
+background: white;
+
+color: #7b2ff7;
+
+font-weight: bold;
+
+
+}
+
+/* =========================================
+HAMBURGER
+========================================= */
+
+.hamburger {
+
+display: none;
+
+width: 32px;
+
+cursor: pointer;
+
+
+}
+
+.hamburger span {
+
+
+display: block;
+
+height: 3px;
+
+margin: 6px 0;
+
+background: white;
+
+border-radius: 5px;
+
+
+}
+
+/* =========================================
+CONTENT
+========================================= */
+
+.content {
+
+
+width: 90%;
+
+max-width: 750px;
+
+margin:
+    70px auto;
+
+display: flex;
+
+justify-content: center;
+
+
+}
+
+/* =========================================
+CARD
+========================================= */
+
+.card {
+  width: 600px;
+  max-width: 100%;
+  /* Light and soft pink-violet gradient background */
+  background: linear-gradient(135deg, #fce7f3, #f5d0fe); 
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px dotted black; 
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+.card:hover {
+
+
+transform:
+    translateY(-6px);
+
+box-shadow:
+    0 20px 40px
+    rgba(0,0,0,0.16);
+
+
+}
+
+/* Card Heading */
+
+.card h2 {
+
+text-align: center;
+
+color: #6f42c1;
+
+font-size: 28px;
+
+margin-bottom: 30px;
+}
+
+
+
+
+/* =========================================
+DETAILS ROW
+========================================= */
+
+.row {
+
+
+display: flex;
+
+justify-content:
+    space-between;
+
+align-items: center;
+
+gap: 20px;
+
+padding:
+    15px 18px;
+
+margin-bottom: 14px;
+
+background:
+    #f1f6fb;
+
+border-left:
+    5px solid #1e73be;
+
+border-radius: 8px;
+
+font-size: 15px;
+
+transition:
+    0.3s;
+
+
+}
+
+.row:hover {
+
+
+transform:
+    translateX(5px);
+
+background:
+    #edf2ff;
+
+
+}
+
+/* Label */
+
+.row span:first-child {
+
+
+font-weight: bold;
+
+color: #333;
+
+min-width: 150px;
+
+
+}
+
+/* Value */
+
+.row span:last-child {
+
+
+color: #555;
+
+text-align: right;
+
+word-break: break-word;
+
+
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+.site-name {
+
+    font-size: 24px;
+}
+
+.nav-menu a {
+
+    font-size: 13px;
+
+    padding:
+        9px 8px;
+}
+
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+
+/* Navbar */
+
+.top-nav {
+
+    min-height: 65px;
+
+    padding:
+        15px 20px;
+}
+
+.site-name {
+
+    font-size: 21px;
+}
+
+
+/* Hamburger */
+
+.hamburger {
+
+    display: block;
+}
+
+
+/* Mobile menu */
+
+.nav-menu {
+
+    display: none;
+
+    position: absolute;
+
+    top: 65px;
+
+    right: 15px;
+
+    width: 250px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.25);
+}
+
+.nav-menu.show {
+
+    display: flex;
+}
+
+.nav-menu a {
+
+    color: #333;
+
+    padding:
+        15px 18px;
+
+    font-size: 15px;
+
+    border-bottom:
+        1px solid #eee;
+
+    border-radius: 0;
+}
+
+.nav-menu a:hover {
+
+    background:
+        #f3efff;
+
+    color:
+        #7b2ff7;
+}
+
+.nav-menu a.active {
+
+    background:
+        #7b2ff7;
+
+    color: white;
+}
+
+
+/* Content */
+
+.content {
+
+    width: 94%;
+
+    margin:
+        35px auto;
+}
+
+
+/* Card */
+
+.card {
+
+    width: 100%;
+
+    padding:
+        22px;
+
+    border-radius:
+        16px;
+}
+
+.card h2 {
+
+    font-size: 24px;
+
+    margin-bottom:
+        22px;
+}
+
+
+/* Rows */
+
+.row {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 6px;
+
+    padding:
+        14px;
+
+    font-size: 14px;
+}
+
+.row span:first-child {
+
+    min-width: auto;
+
+    color:
+        #333;
+}
+
+.row span:last-child {
+
+    text-align: left;
+
+    width: 100%;
+
+    color:
+        #555;
+}
+
+
+}
+
+/* =========================================
+SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+.site-name {
+
+    font-size: 19px;
+}
+
+.nav-menu {
+
+    width:
+        calc(100% - 30px);
+
+    right: 15px;
+}
+
+.content {
+
+    width: 94%;
+
+    margin:
+        25px auto;
+}
+
+.card {
+
+    padding:
+        18px;
+}
+
+.card h2 {
+
+    font-size: 22px;
+}
+
+.row {
+
+    padding:
+        13px;
+
+    font-size: 13px;
+}
+
+
+}.footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+  color: #e9d5ff;
+  font-size: 14px;
+  background: #2e1065;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer span {
+  font-weight: bold;
+  color: #f472b6;
+}

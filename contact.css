@@ -1,0 +1,1078 @@
+/* =========================================
+RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+
+
+margin: 0;
+
+font-family:
+    'Segoe UI',
+    Arial,
+    sans-serif;
+
+min-height: 100vh;
+
+ background: linear-gradient(135deg, #2e1065 0%, #3b0764 50%, #1e1b4b 100%);
+
+color: #333;
+
+
+}
+
+/* =========================================
+NAVBAR
+========================================= */
+
+.top-nav {
+
+
+width: 100%;
+
+min-height: 70px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding:
+    15px 30px;
+
+background:
+    linear-gradient(
+        90deg,
+        #7b2ff7,
+        #f107a3,
+        #00c6ff
+    );
+
+box-shadow:
+    0 4px 15px
+    rgba(0,0,0,0.2);
+
+position: sticky;
+
+top: 0;
+
+z-index: 1000;
+
+
+}
+
+/* Portfolio Name */
+
+.site-name {
+
+
+color: white;
+
+font-size: 28px;
+
+font-weight: bold;
+
+
+}
+
+/* Desktop Navigation */
+
+.nav-menu {
+
+
+display: flex;
+
+align-items: center;
+
+gap: 5px;
+
+
+}
+
+.nav-menu a {
+
+
+text-decoration: none;
+
+color: white;
+
+font-size: 14px;
+
+padding:
+    10px 12px;
+
+border-radius: 8px;
+
+transition:
+    0.3s;
+
+
+}
+
+.nav-menu a:hover {
+
+
+background:
+    rgba(255,255,255,0.2);
+
+
+}
+
+.nav-menu a.active {
+
+
+background: white;
+
+color:
+    #7b2ff7;
+
+font-weight: bold;
+
+
+}
+
+/* =========================================
+HAMBURGER
+========================================= */
+
+.hamburger {
+
+display: none;
+
+width: 32px;
+
+cursor: pointer;
+
+
+}
+
+.hamburger span {
+
+
+display: block;
+
+height: 3px;
+
+margin: 6px 0;
+
+background: white;
+
+border-radius: 5px;
+
+
+}
+
+/* =========================================
+CONTACT CONTENT
+========================================= */
+
+.content {
+
+
+width: 90%;
+
+max-width: 1000px;
+
+margin:
+    60px auto;
+
+display: flex;
+
+justify-content: center;
+
+align-items: stretch;
+
+gap: 35px;
+
+
+}
+
+/* =========================================
+CARD
+========================================= */
+
+.card {
+
+
+flex: 1;
+
+background:
+    rgba(255,255,255,0.96);
+
+padding:
+    30px;
+
+border-radius:
+    20px;
+
+box-shadow:
+    0 12px 30px
+    rgba(0,0,0,0.12);
+
+border:
+    1px solid #eee;
+
+transition:
+    0.3s;
+
+
+}
+
+.card:hover {
+
+
+transform:
+    translateY(-5px);
+
+box-shadow:
+    0 18px 38px
+    rgba(0,0,0,0.16);
+
+}
+
+.card h2 {
+
+text-align:
+    center;
+
+color:
+    #6f42c1;
+
+font-size:
+    26px;
+
+margin-bottom:
+    25px;
+
+
+}
+
+/* =========================================
+CONTACT ICON
+========================================= */
+
+.contact-icon {
+
+
+width:
+    60px;
+
+height:
+    60px;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+margin:
+    0 auto 15px;
+
+font-size:
+    30px;
+
+background:
+    #f1eaff;
+
+border-radius:
+    50%;
+
+
+}
+
+/* =========================================
+CONTACT INFORMATION
+========================================= */
+
+.info-item {
+
+
+display:
+    flex;
+
+align-items:
+    center;
+
+gap:
+    15px;
+
+padding:
+    15px;
+
+margin-bottom:
+    15px;
+
+background:
+    #f1f6fb;
+
+border-left:
+    5px solid #1e73be;
+
+border-radius:
+    9px;
+
+transition:
+    0.3s;
+
+
+}
+
+.info-item:hover {
+
+
+transform:
+    translateX(6px);
+
+background:
+    #edf2ff;
+
+
+}
+
+.info-icon {
+
+
+min-width:
+    42px;
+
+height:
+    42px;
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+background:
+    white;
+
+border-radius:
+    50%;
+
+font-size:
+    20px;
+
+box-shadow:
+    0 4px 10px
+    rgba(0,0,0,0.08);
+
+
+}
+
+.info-item h3 {
+
+
+margin:
+    0 0 4px;
+
+font-size:
+    15px;
+
+color:
+    #333;
+
+
+}
+
+.info-item p {
+
+
+margin:
+    0;
+
+font-size:
+    14px;
+
+color:
+    #555;
+
+word-break:
+    break-word;
+
+
+}
+
+/* =========================================
+FORM
+========================================= */
+
+.form-card form {
+
+
+display:
+    flex;
+
+flex-direction:
+    column;
+
+
+}
+
+.form-card label {
+
+
+margin-bottom:
+    6px;
+
+font-size:
+    14px;
+
+font-weight:
+    bold;
+
+color:
+    #444;
+
+
+}
+
+.form-card input,
+.form-card textarea {
+
+
+width:
+    100%;
+
+padding:
+    12px;
+
+margin-bottom:
+    17px;
+
+border:
+    1px solid #ccc;
+
+border-radius:
+    8px;
+
+font-family:
+    inherit;
+
+font-size:
+    14px;
+
+resize:
+    vertical;
+
+outline:
+    none;
+
+transition:
+    0.3s;
+
+
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+
+
+border-color:
+    #7b2ff7;
+
+box-shadow:
+    0 0 0 3px
+    rgba(123,47,247,0.1);
+
+
+}
+
+.form-card button {
+
+
+width:
+    100%;
+
+padding:
+    13px;
+
+border:
+    none;
+
+border-radius:
+    8px;
+
+background:
+    linear-gradient(
+        90deg,
+        #7b2ff7,
+        #f107a3
+    );
+
+color:
+    white;
+
+font-size:
+    15px;
+
+font-weight:
+    bold;
+
+cursor:
+    pointer;
+
+transition:
+    0.3s;
+
+
+}
+
+.form-card button:hover {
+
+
+transform:
+    translateY(-2px);
+
+box-shadow:
+    0 8px 18px
+    rgba(123,47,247,0.25);
+
+
+}
+
+/* =========================================
+THANK YOU SECTION
+========================================= */
+
+.thank-section {
+
+
+width:
+    90%;
+
+max-width:
+    800px;
+
+margin:
+    20px auto 60px;
+
+text-align:
+    center;
+
+padding:
+    20px;
+
+
+}
+
+.thank-img {
+
+
+width:
+    320px;
+
+max-width:
+    90%;
+
+border-radius:
+    15px;
+
+box-shadow:
+    0 20px 40px
+    rgba(0,0,0,0.25);
+
+border:
+    3px solid white;
+
+margin-bottom:
+    20px;
+
+transition:
+    0.3s;
+
+
+}
+
+.thank-img:hover {
+
+
+transform:
+    scale(1.03);
+
+
+}
+
+.thank-text {
+
+
+font-size:
+    34px;
+
+font-weight:
+    800;
+
+letter-spacing:
+    2px;
+
+text-transform:
+    uppercase;
+
+color:
+    #2c2c54;
+
+
+}
+
+.thank-text span {
+
+
+display:
+    block;
+
+margin-top:
+    8px;
+
+font-size:
+    18px;
+
+font-weight:
+    500;
+
+letter-spacing:
+    4px;
+
+color:
+    #6f42c1;
+
+
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+
+.site-name {
+
+    font-size:
+        24px;
+}
+
+
+.nav-menu a {
+
+    font-size:
+        13px;
+
+    padding:
+        9px 8px;
+}
+
+
+.content {
+
+    width:
+        94%;
+
+    gap:
+        20px;
+}
+
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+
+/* Navbar */
+
+.top-nav {
+
+    min-height:
+        65px;
+
+    padding:
+        15px 20px;
+}
+
+
+.site-name {
+
+    font-size:
+        21px;
+}
+
+
+/* Hamburger */
+
+.hamburger {
+
+    display:
+        block;
+}
+
+
+/* Mobile Menu */
+
+.nav-menu {
+
+    display:
+        none;
+
+    position:
+        absolute;
+
+    top:
+        65px;
+
+    right:
+        15px;
+
+    width:
+        250px;
+
+    flex-direction:
+        column;
+
+    align-items:
+        stretch;
+
+    gap:
+        0;
+
+    background:
+        white;
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.25);
+}
+
+
+.nav-menu.show {
+
+    display:
+        flex;
+}
+
+
+.nav-menu a {
+
+    color:
+        #333;
+
+    padding:
+        15px 18px;
+
+    font-size:
+        15px;
+
+    border-bottom:
+        1px solid #eee;
+
+    border-radius:
+        0;
+}
+
+
+.nav-menu a:hover {
+
+    background:
+        #f3efff;
+
+    color:
+        #7b2ff7;
+}
+
+
+.nav-menu a.active {
+
+    background:
+        #7b2ff7;
+
+    color:
+        white;
+}
+
+
+/* Content */
+
+.content {
+
+    width:
+        94%;
+
+    margin:
+        35px auto;
+
+    flex-direction:
+        column;
+
+    gap:
+        20px;
+}
+
+
+.card {
+
+    width:
+        100%;
+
+    padding:
+        22px;
+
+    border-radius:
+        16px;
+        
+}
+
+
+.card h2 {
+
+    font-size:
+        23px;
+}
+
+
+/* Thank You */
+
+.thank-section {
+
+    width:
+        94%;
+
+    margin:
+        10px auto 40px;
+
+    padding:
+        10px;
+}
+
+
+.thank-img {
+
+    width:
+        280px;
+
+    max-width:
+        90%;
+}
+
+
+.thank-text {
+
+    font-size:
+        27px;
+        color: white;
+}
+
+
+.thank-text span {
+
+    font-size:
+        14px;
+    color: palevioletred;
+    letter-spacing:
+        2px;
+}
+
+
+}
+
+/* =========================================
+SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+
+.site-name {
+
+    font-size:
+        19px;
+}
+
+
+.nav-menu {
+
+    width:
+        calc(100% - 30px);
+
+    right:
+        15px;
+}
+
+
+.content {
+
+    width:
+        94%;
+
+    margin:
+        25px auto;
+}
+
+
+.card {
+
+    padding:
+        18px;
+
+    border-radius:
+        14px;
+}
+
+
+.card h2 {
+
+    font-size:
+        21px;
+}
+
+
+.info-item {
+
+    padding:
+        13px;
+
+    gap:
+        10px;
+}
+
+
+.info-icon {
+
+    min-width:
+        38px;
+
+    height:
+        38px;
+
+    font-size:
+        18px;
+}
+
+
+.info-item h3 {
+
+    font-size:
+        14px;
+}
+
+
+.info-item p {
+
+    font-size:
+        12.5px;
+}
+
+
+.form-card input,
+.form-card textarea {
+
+    font-size:
+        13px;
+
+    padding:
+        10px;
+}
+
+
+.form-card button {
+
+    font-size:
+        14px;
+
+    padding:
+        12px;
+}
+
+
+.thank-img {
+
+    width:
+        340px;
+}
+
+
+.thank-text {
+
+    font-size:
+        24px;
+
+    letter-spacing:
+        1px;
+    color: white;
+}
+
+
+.thank-text span {
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        1.5px;
+    color: palevioletred;
+}
+
+
+}.footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+  color: #e9d5ff;
+  font-size: 14px;
+  background: #2e1065;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer span {
+  font-weight: bold;
+  color: #f472b6;
+}
+.card {
+  flex: 1;
+  background: rgba(255,255,255,0.96);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  
+  /* 3px ku badhila 1px nu potta small dots varum */
+  border: 1px dotted black; 
+
+  transition: 0.3s;
+}
+.thank-text {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white; /* Intha line-a add pannikonga */
+}
+
+.thank-text span {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: #ffffff; /* Ithayum white-ah mathikonga */
+}

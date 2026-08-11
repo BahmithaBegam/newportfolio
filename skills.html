@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Skills & Strengths</title>
+
+<link rel="stylesheet" href="skills.css">
+
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR`
+========================= -->
+<header class="top-nav">
+    <div class="site-name">
+        Bahmi's Portfolio
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-menu" id="hamburgerMenu">
+        <a href="index.html">Home</a>
+        <a href="skills.html" class="active">Skills and Strength</a>
+        <a href="personal.html">Personal Details</a>
+        <a href="Academic.html">Academic Status</a>
+        <a href="courses.html">Courses & Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+
+</header>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main class="container">
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section class="card">
+
+    <h2>Skills</h2>
+
+
+    <!-- HTML & CSS -->
+
+    <div class="skill">
+
+        <div class="skill-title">
+
+            <p>FRONTEND DEVELOPMENT</p>
+
+            <span>85%</span>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar html"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Form Handling -->
+
+    <div class="skill">
+
+        <div class="skill-title">
+
+            <p>WEB DESIGNER AND MOBILE APP DEVELOPER</p>
+
+            <span>75%</span>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar css"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Responsive Design -->
+
+    <div class="skill">
+
+        <div class="skill-title">
+
+            <p>PROGRAMMING LANGUAGES</p>
+
+            <span>70%</span>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar java"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <div class="skill">
+
+        <div class="skill-title">
+
+            <p>RESPONSIVE DESIGN </p>
+
+            <span>60%</span>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar git"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     STRENGTHS
+========================= -->
+
+<section class="card">
+
+    <h2>Strengths</h2>
+
+
+    <div class="strength">
+        💡 Problem Solving
+    </div>
+
+    <div class="strength">
+        🤝 Teamwork
+    </div>
+
+    <div class="strength">
+        😊 Positive Attitude
+    </div>
+
+    <div class="strength">
+        💬 Good Communication
+    </div>
+
+</section>
+
+
+</main>
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="footer">
+    &copy; 2026 Bahmi | <span id="page-name"></span>
+</footer>
+
+<script>
+    // Page URL-a vatchu active page name-a automatic-ah find panrathu
+    const path = window.location.pathname;
+    let pageTitle = "Home"; // Default
+
+    if (path.includes("skills.html")) {
+        pageTitle = "Skills and Strength";
+    } else if (path.includes("personal.html")) {
+        pageTitle = "Personal Details";
+    } else if (path.includes("Academic.html")) {
+        pageTitle = "Academic Status";
+    } else if (path.includes("courses.html")) {
+        pageTitle = "Courses & Projects";
+    } else if (path.includes("contact.html")) {
+        pageTitle = "Contact";
+    } else if (path.includes("index.html") || path === "/") {
+        pageTitle = "Home";
+    }
+
+    // Span tag-la antha name-a display panrathu
+    document.getElementById("page-name").innerText = pageTitle;
+</script>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

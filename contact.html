@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Contact Me</title>
+
+<link rel="stylesheet" href="contact.css">
+```
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR`
+========================= -->
+<header class="top-nav">
+    <div class="site-name">
+        Bahmi's Portfolio
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-menu" id="hamburgerMenu">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills and Strength</a>
+        <a href="personal.html">Personal Details</a>
+        <a href="Academic.html">Academic Status</a>
+        <a href="courses.html" >Courses & Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+```
+
+</header>
+
+<!-- =========================
+     CONTACT CONTENT
+========================= -->
+
+<main class="content">
+
+```
+<!-- =========================
+     CONTACT INFORMATION
+========================= -->
+
+<section class="card contact-details">
+
+    <div class="contact-icon">
+        📞
+    </div>
+
+    <h2>
+        Contact Information
+    </h2>
+
+
+    <div class="info-item">
+
+        <span class="info-icon">
+            📧
+        </span>
+
+        <div>
+
+            <h3>Email</h3>
+
+            <p>
+                bahmithabegam@gmail.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-item">
+
+        <span class="info-icon">
+            📱
+        </span>
+
+        <div>
+
+            <h3>Phone</h3>
+
+            <p>
+                9659713688
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-item">
+
+        <span class="info-icon">
+            💬
+        </span>
+
+        <div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+                +91 969713688
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="info-item">
+
+        <span class="info-icon">
+            📍
+        </span>
+
+        <div>
+
+            <h3>Location</h3>
+
+            <p>
+                Madurai, Tamil Nadu
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT FORM
+========================= -->
+
+<section class="card form-card">
+
+    <h2>
+        Contact Me
+    </h2>
+
+
+    <form>
+
+
+        <label>
+            Your Name
+        </label>
+
+        <input
+            type="text"
+            placeholder="Enter your name"
+            required
+        >
+
+
+        <label>
+            Your Email
+        </label>
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required
+        >
+
+
+        <label>
+            Subject
+        </label>
+
+        <input
+            type="text"
+            placeholder="Enter subject"
+        >
+
+
+        <label>
+            Your Message
+        </label>
+
+        <textarea
+            placeholder="Write your message..."
+            rows="5"
+        ></textarea>
+
+
+        <button type="submit">
+            Send Message ✈️
+        </button>
+
+    </form>
+
+</section>
+```
+
+</main>
+
+<!-- =========================
+     THANK YOU
+========================= -->
+
+<section class="thank-section">
+
+```
+<img
+    src="laptop1.png"
+    alt="Laptop"
+    class="thank-img"
+>
+
+
+<h2 class="thank-text">
+
+    THANK YOU
+
+    <span>
+        FOR VISITING MY PROFILE
+    </span>
+
+</h2>
+
+</section>
+
+<script src="script.js"></script>
+<script>
+  document.querySelector('form').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Page refresh aaguratha thadukkum
+
+    // Input fields-la irunthu values eduthu object-ah matrom
+    const formData = {
+      name: document.querySelector('input[placeholder="Enter your name"]').value,
+      email: document.querySelector('input[placeholder="Enter your email"]').value,
+      subject: document.querySelector('input[placeholder="Enter subject"]').value,
+      message: document.querySelector('textarea[placeholder="Write your message..."]').value
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        alert('Message sent successfully!');
+        this.reset(); // Form-a clear pannidum
+      } else {
+        alert('Failed to send message.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Could not connect to the server.');
+    }
+  });
+</script>
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="footer">
+    &copy; 2026 Bahmi | <span id="page-name"></span>
+</footer>
+
+<script>
+    // Page URL-a vatchu active page name-a automatic-ah find panrathu
+    const path = window.location.pathname;
+    let pageTitle = "Home"; // Default
+
+    if (path.includes("skills.html")) {
+        pageTitle = "Skills and Strength";
+    } else if (path.includes("personal.html")) {
+        pageTitle = "Personal Details";
+    } else if (path.includes("Academic.html")) {
+        pageTitle = "Academic Status";
+    } else if (path.includes("courses.html")) {
+        pageTitle = "Courses & Projects";
+    } else if (path.includes("contact.html")) {
+        pageTitle = "Contact";
+    } else if (path.includes("index.html") || path === "/") {
+        pageTitle = "Home";
+    }
+
+    // Span tag-la antha name-a display panrathu
+    document.getElementById("page-name").innerText = pageTitle;
+</script>
+
+</body>
+
+</html>

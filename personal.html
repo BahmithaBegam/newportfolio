@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Personal Details</title>
+
+<link rel="stylesheet" href="personal.css">
+
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR`
+========================= -->
+<header class="top-nav">
+    <div class="site-name">
+        Bahmi's Portfolio
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-menu" id="hamburgerMenu">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills and Strength</a>
+        <a href="personal.html" class="active">Personal Details</a>
+        <a href="Academic.html">Academic Status</a>
+        <a href="courses.html">Courses & Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+
+</header>
+
+<!-- =========================
+     PERSONAL DETAILS
+========================= -->
+
+<main class="content">
+
+
+<div class="card">
+
+    <h2>Personal Details</h2>
+
+
+    <!-- Email -->
+
+    <div class="row">
+
+        <span>Email</span>
+
+        <span>
+            bahmithabegam@gmail.com
+        </span>
+
+    </div>
+
+
+    <!-- Mobile -->
+
+    <div class="row">
+
+        <span>Mobile Number</span>
+
+        <span>
+            9659713688
+        </span>
+
+    </div>
+
+
+    <!-- Year & Department -->
+
+    <div class="row">
+
+        <span>Year & Department</span>
+
+        <span>
+            4th & CSE
+        </span>
+
+    </div>
+
+
+    <!-- College -->
+
+    <div class="row">
+
+        <span>College</span>
+
+        <span>
+           Anna University Regional Campus Madurai
+        </span>
+
+    </div>
+
+
+    <!-- Address -->
+
+    <div class="row">
+
+        <span>Address</span>
+
+        <span>
+            Madurai, Tamil Nadu
+        </span>
+
+    </div>
+
+</div>
+
+
+</main>
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="footer">
+    &copy; 2026 Bahmi | <span id="page-name"></span>
+</footer>
+
+<script>
+    // Page URL-a vatchu active page name-a automatic-ah find panrathu
+    const path = window.location.pathname;
+    let pageTitle = "Home"; // Default
+
+    if (path.includes("skills.html")) {
+        pageTitle = "Skills and Strength";
+    } else if (path.includes("personal.html")) {
+        pageTitle = "Personal Details";
+    } else if (path.includes("Academic.html")) {
+        pageTitle = "Academic Status";
+    } else if (path.includes("courses.html")) {
+        pageTitle = "Courses & Projects";
+    } else if (path.includes("contact.html")) {
+        pageTitle = "Contact";
+    } else if (path.includes("index.html") || path === "/") {
+        pageTitle = "Home";
+    }
+
+    // Span tag-la antha name-a display panrathu
+    document.getElementById("page-name").innerText = pageTitle;
+</script>
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

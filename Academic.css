@@ -1,0 +1,794 @@
+/* =========================================
+RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+
+
+font-family:
+    'Segoe UI',
+    Arial,
+    sans-serif;
+
+min-height: 100vh;
+
+ background: linear-gradient(135deg, #2e1065 0%, #3b0764 50%, #1e1b4b 100%);
+
+color: #333;
+
+
+}
+
+/* =========================================
+NAVBAR
+========================================= */
+
+.top-nav {
+
+
+width: 100%;
+
+min-height: 70px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding:
+    15px 30px;
+
+background:
+    linear-gradient(
+        90deg,
+        #7b2ff7,
+        #f107a3,
+        #00c6ff
+    );
+
+box-shadow:
+    0 4px 15px
+    rgba(0,0,0,0.2);
+
+position: sticky;
+
+top: 0;
+
+z-index: 1000;
+
+
+}
+
+/* Portfolio Name */
+
+.site-name {
+
+
+color: white;
+
+font-size: 28px;
+
+font-weight: bold;
+
+
+}
+
+/* Desktop Navigation */
+
+.nav-menu {
+
+
+display: flex;
+
+align-items: center;
+
+gap: 5px;
+
+
+}
+
+.nav-menu a {
+
+
+text-decoration: none;
+
+color: white;
+
+font-size: 14px;
+
+padding:
+    10px 12px;
+
+border-radius: 8px;
+
+transition:
+    0.3s;
+
+
+}
+
+.nav-menu a:hover {
+
+
+background:
+    rgba(255,255,255,0.2);
+
+
+}
+
+.nav-menu a.active {
+
+
+background: white;
+
+color: #7b2ff7;
+
+font-weight: bold;
+
+
+}
+
+/* =========================================
+HAMBURGER
+========================================= */
+
+.hamburger {
+
+
+display: none;
+
+width: 32px;
+
+cursor: pointer;
+
+
+}
+
+.hamburger span {
+
+
+display: block;
+
+height: 3px;
+
+margin: 6px 0;
+
+background: white;
+
+border-radius: 5px;
+
+
+}
+
+/* =========================================
+ACADEMIC SECTION
+========================================= */
+
+.academic-section {
+
+
+width: 90%;
+
+max-width: 750px;
+
+margin:
+    55px auto;
+
+padding:
+    10px;
+
+
+}
+
+/* =========================================
+TITLE
+========================================= */
+
+.title {
+
+
+text-align: center;
+
+font-size: 38px;
+
+color:
+    #4b1d7a;
+
+margin-bottom:
+    10px;
+
+
+}
+
+.tagline {
+
+
+text-align: center;
+
+color:
+    #666;
+
+margin-bottom:
+    55px;
+
+font-size: 16px;
+
+line-height: 1.6;
+
+
+}
+
+/* =========================================
+EDUCATION CARD
+========================================= */
+
+.edu-card {
+
+
+background:
+    #ffffff;
+
+padding:
+    30px;
+
+border-radius:
+    20px;
+
+margin-bottom:
+    40px;
+
+position:
+    relative;
+
+transition:
+    0.4s;
+
+overflow:
+    visible;
+
+
+}
+
+.edu-card:hover {
+
+
+transform:
+    translateY(-8px)
+    scale(1.01);
+
+
+}
+
+/* =========================================
+ICON
+========================================= */
+
+.icon {
+
+
+position:
+    absolute;
+
+top:
+    -25px;
+
+right:
+    25px;
+
+font-size:
+    40px;
+
+background:
+    #ffffff;
+
+padding:
+    10px;
+
+border-radius:
+    50%;
+
+box-shadow:
+    0 5px 15px
+    rgba(0,0,0,0.12);
+
+
+}
+
+/* =========================================
+TEXT
+========================================= */
+
+.edu-card h2 {
+
+
+font-size:
+    26px;
+
+margin-bottom:
+    8px;
+
+
+}
+
+.edu-card h4 {
+
+
+color:
+    #444;
+
+margin-bottom:
+    7px;
+
+line-height:
+    1.5;
+
+
+}
+
+.edu-card span {
+
+
+font-size:
+    14px;
+
+color:
+    #888;
+
+
+}
+
+.edu-card p {
+
+
+margin-top:
+    16px;
+
+line-height:
+    1.7;
+
+color:
+    #555;
+
+font-size:
+    15px;
+
+
+}
+
+/* =========================================
+SCHOOL CARD
+========================================= */
+
+.school-card {
+
+
+border-left:
+    6px solid #6f42c1;
+
+box-shadow:
+    0 12px 35px
+    rgba(111,66,193,0.35);
+
+
+}
+
+.school-card h2 {
+
+
+color:
+    #6f42c1;
+
+
+}
+
+/* =========================================
+COLLEGE CARD
+========================================= */
+
+.college-card {
+
+
+border-left:
+    6px solid #e83e8c;
+
+box-shadow:
+    0 12px 35px
+    rgba(232,62,140,0.35);
+
+
+}
+
+.college-card h2 {
+
+
+color:
+    #e83e8c;
+
+
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+
+.site-name {
+
+    font-size:
+        24px;
+}
+
+.nav-menu a {
+
+    font-size:
+        13px;
+
+    padding:
+        9px 8px;
+}
+
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+
+/* Navbar */
+
+.top-nav {
+
+    min-height:
+        65px;
+
+    padding:
+        15px 20px;
+}
+
+.site-name {
+
+    font-size:
+        21px;
+}
+
+
+/* Hamburger */
+
+.hamburger {
+
+    display:
+        block;
+}
+
+
+/* Mobile Menu */
+
+.nav-menu {
+
+    display:
+        none;
+
+    position:
+        absolute;
+
+    top:
+        65px;
+
+    right:
+        15px;
+
+    width:
+        250px;
+
+    flex-direction:
+        column;
+
+    align-items:
+        stretch;
+
+    gap:
+        0;
+
+    background:
+        white;
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.25);
+}
+
+
+.nav-menu.show {
+
+    display:
+        flex;
+}
+
+
+.nav-menu a {
+
+    color:
+        #333;
+
+    padding:
+        15px 18px;
+
+    font-size:
+        15px;
+
+    border-bottom:
+        1px solid #eee;
+
+    border-radius:
+        0;
+}
+
+
+.nav-menu a:hover {
+
+    background:
+        #f3efff;
+
+    color:
+        #7b2ff7;
+}
+
+
+.nav-menu a.active {
+
+    background:
+        #7b2ff7;
+
+    color:
+        white;
+}
+
+
+/* Academic */
+
+.academic-section {
+
+    width:
+        94%;
+
+    margin:
+        35px auto;
+
+    padding:
+        5px;
+}
+
+
+/* Title */
+
+.title {
+
+    font-size:
+        29px;
+
+    line-height:
+        1.3;
+}
+
+.tagline {
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        45px;
+}
+
+
+/* Cards */
+
+.edu-card {
+
+    padding:
+        22px;
+
+    margin-bottom:
+        35px;
+
+    border-radius:
+        16px;
+}
+
+
+.edu-card h2 {
+
+    font-size:
+        23px;
+}
+
+
+.edu-card h4 {
+
+    font-size:
+        14px;
+}
+
+
+.edu-card p {
+
+    font-size:
+        14px;
+
+    line-height:
+        1.7;
+}
+
+
+/* Icon */
+
+.icon {
+
+    top:
+        -20px;
+
+    right:
+        18px;
+
+    font-size:
+        30px;
+
+    padding:
+        8px;
+}
+
+
+}
+
+/* =========================================
+SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+
+.site-name {
+
+    font-size:
+        19px;
+}
+
+.nav-menu {
+
+    width:
+        calc(100% - 30px);
+
+    right:
+        15px;
+}
+
+
+.academic-section {
+
+    width:
+        94%;
+
+    margin:
+        30px auto;
+}
+
+
+.title {
+
+    font-size:
+        26px;
+}
+
+
+.tagline {
+
+    font-size:
+        13px;
+
+    margin-bottom:
+        40px;
+}
+
+
+.edu-card {
+
+    padding:
+        18px;
+
+    border-radius:
+        14px;
+}
+
+
+.edu-card h2 {
+
+    font-size:
+        21px;
+}
+
+
+.edu-card h4 {
+
+    font-size:
+        13px;
+}
+
+
+.edu-card span {
+
+    font-size:
+        12px;
+}
+
+
+.edu-card p {
+
+    font-size:
+        13px;
+}
+
+
+.icon {
+
+    font-size:
+        26px;
+
+    padding:
+        7px;
+
+    right:
+        15px;
+}
+
+
+}.footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+  color: #e9d5ff;
+  font-size: 14px;
+  background: #2e1065;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer span {
+  font-weight: bold;
+  color: #f472b6;
+}/* =========================================
+ACADEMIC PAGE TITLE & TAGLINE (White Text Fix)
+========================================= */
+
+.academic-section .title {
+  color: #ffffff; /* Bright white title */
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.academic-section .tagline {
+  color: #e9d5ff; /* Light purple/lavender subtitle */
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
