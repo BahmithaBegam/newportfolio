@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const { Resend } = require('resend');
+const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const Contact = require('./models/Contact');
@@ -20,8 +20,15 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB Atlas successfully!'))
   .catch((err) => console.error('MongoDB Connection Failed:', err));
 
-// Email configuration using Resend
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Email configuration using Environment Variables
+// Email configuration using Environment Variables
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
 
 // Test Route
 
@@ -35,22 +42,22 @@ app.post('/api/contact', async (req, res) => {
     const newContact = new Contact({ name, email, subject, message });
     await newContact.save();
 
-    // 2. Send Email to You (via Resend)
-    try {
-      await resend.emails.send({
-        from: 'onboarding@resend.dev', // Resend free tier default sender
-        to: process.env.EMAIL_USER,     // Ungaloda Gmail-ku anuppum
-        subject: `New Portfolio Message: ${subject || 'No Subject'}`,
-        html: `<p><strong>Name:</strong> ${name}</p>
-               <p><strong>Email:</strong> ${email}</p>
-               <p><strong>Subject:</strong> ${subject}</p>
-               <p><strong>Message:</strong> ${message}</p>`
-      });
-      console.log('Email sent successfully via Resend');
-    } catch (emailError) {
-      console.error('Email sending failed:', emailError);
-      // DB-la save aayiduchu, email fail aana kuda process continue aagum
-    }
+    // 2. Send Email to You
+    const mailOptions = {
+      from: email,
+      to: process.env.EMAIL_USER, // Ungaloda Gmail-ku anuppum
+      subject: `New Portfolio Message: ${subject || 'No Subject'}`,
+      text: `You have a new message from your portfolio contact form:\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage:\n${message}`
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error('Email sending failed:', error);
+        // DB-la save aayiduchu, but email send aagalana kuda user-ku success kaattalam or handle pannalam
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
 
     res.status(201).json({ success: true, message: 'Message sent, saved, and emailed successfully!' });
   
@@ -65,3 +72,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+final server
