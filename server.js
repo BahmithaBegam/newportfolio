@@ -33,9 +33,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Test Route
-app.get('/', (req, res) => {
-  res.send('Portfolio Backend is running!');
-});
+
 
 // Contact Form Endpoint (Saves to MongoDB AND Sends Email)
 app.post('/api/contact', async (req, res) => {
