@@ -7,6 +7,8 @@ require('dotenv').config();
 const Contact = require('./models/Contact');
 
 const app = express();
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../')));
 
 // Middleware
 app.use(express.json());
