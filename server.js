@@ -21,8 +21,11 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.error('MongoDB Connection Failed:', err));
 
 // Email configuration using Environment Variables
+// Email configuration using Environment Variables
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
