@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Background | Bahmi's Portfolio</title>
 
-<meta charset="UTF-8">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<title>Academic Background</title>
-
-<link rel="stylesheet" href="Academic.css">
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="Academic.css">
 </head>
 
 <body>
 
 <!-- =========================
-     NAVBAR`
+     NAVBAR
 ========================= -->
 <header class="top-nav">
     <div class="site-name">
-        Bahmi's Portfolio
+        ✨ Bahmi's Portfolio
     </div>
 
     <!-- Hamburger -->
@@ -34,7 +34,7 @@
         <span></span>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation Menu -->
     <nav class="nav-menu" id="hamburgerMenu">
         <a href="index.html">Home</a>
         <a href="skills.html">Skills and Strength</a>
@@ -45,105 +45,63 @@
     </nav>
 </header>
 
-</header>
-
 <!-- =========================
      ACADEMIC SECTION
 ========================= -->
+<main class="main-container">
 
-<main class="academic-section">
-
-```
-<h1 class="title">
-    Academic Background
-</h1>
-
-
-<p class="tagline">
-    A journey of learning, growth, and passion towards technology
-</p>
-
-
-
-<!-- =========================
-     SCHOOL CARD
-========================= -->
-
-<div class="edu-card school-card">
-
-    <div class="icon">
-        🎓
+    <!-- PAGE HEADER -->
+    <div class="page-heading">
+        <h1 class="title">ACADEMIC BACKGROUND</h1>
+        <p class="subtitle">A journey of learning, growth, and passion towards technology</p>
     </div>
 
+    <!-- CARDS CONTAINER -->
+    <div class="academic-stack">
 
-    <h2>
-        Schooling
-    </h2>
+        <!-- SCHOOL CARD -->
+        <section class="edu-card school-card">
+            <div class="floating-icon">🎓</div>
+            <div class="card-content">
+                <span class="card-tag">HIGHER SECONDARY & SSLC</span>
+                <h2 class="card-title">Schooling</h2>
+                <h3 class="institution-name">Creative Matric Higher Secondary School, Puliyur</h3>
+                
+                <div class="score-pills">
+                    <span class="score-pill">SSLC - 95.6%</span>
+                    <span class="score-pill">HSLC - 88.17%</span>
+                    <span class="duration-pill">2020 – 2023</span>
+                </div>
 
+                <p class="card-desc">
+                    Completed schooling with a strong academic foundation and active participation in extracurricular activities. Developed discipline, analytical curiosity, and a core interest in computer science and technology.
+                </p>
+            </div>
+        </section>
 
-    <h3>
-        Creative Matric Higher Secondary School, Puliyur
-    </h3>
-    <h4>SSLC - 95.6%
-        HSLC - 88.17%
-    </h4>
+        <!-- COLLEGE CARD -->
+        <section class="edu-card college-card">
+            <div class="floating-icon">💻</div>
+            <div class="card-content">
+                <span class="card-tag">UNDERGRADUATE DEGREE</span>
+                <h2 class="card-title">College Education</h2>
+                <h3 class="institution-name">Anna University – Regional Campus, Madurai</h3>
+                
+                <div class="score-pills">
+                    <span class="score-pill cgpa-highlight">Current CGPA : 8.76</span>
+                    <span class="duration-pill">2023 – 2027</span>
+                </div>
 
+                <p class="card-desc">
+                    Currently pursuing <b>B.E. Computer Science and Engineering</b>. Actively learning modern full-stack web technologies, object-oriented concepts, and mobile application frameworks to solve real-world problems.
+                </p>
+            </div>
+        </section>
 
-    <span>
-        2020 – 2023
-    </span>
-
-
-    <p>
-        Completed my schooling with a strong academic base and active
-        participation in school activities. These years helped me develop
-        discipline, curiosity, and a deep interest in computer-related
-        subjects.
-    </p>
-
-</div>
-
-
-
-<!-- =========================
-     COLLEGE CARD
-========================= -->
-
-<div class="edu-card college-card">
-
-    <div class="icon">
-        💻
     </div>
-
-
-    <h2>
-        College Education
-    </h2>
-
-
-    <h3>
-        Anna University – Regional Campus, Madurai
-    </h3>
-    <h4>Current CGPA : 8.76</h4>
-
-
-    <span>
-        2023 – Present
-    </span>
-
-
-    <p>
-        Currently pursuing
-        <b>B.E Computer Science and Engineering</b>.
-        Actively learning web technologies and focusing on building
-        responsive, creative, and user-friendly websites and mobile 
-        application that solve real-world problems.
-    </p>
-
-</div>
-```
 
 </main>
+
 <!-- =========================
      FOOTER
 ========================= -->
@@ -152,9 +110,8 @@
 </footer>
 
 <script>
-    // Page URL-a vatchu active page name-a automatic-ah find panrathu
     const path = window.location.pathname;
-    let pageTitle = "Home"; // Default
+    let pageTitle = "Home";
 
     if (path.includes("skills.html")) {
         pageTitle = "Skills and Strength";
@@ -170,13 +127,10 @@
         pageTitle = "Home";
     }
 
-    // Span tag-la antha name-a display panrathu
     document.getElementById("page-name").innerText = pageTitle;
 </script>
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
