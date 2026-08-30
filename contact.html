@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Bahmi's Portfolio</title>
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-<title>Contact Me</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="contact.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
 
 <!-- =========================
-     NAVBAR`
+     NAVBAR
 ========================= -->
 <header class="top-nav">
     <div class="site-name">
-        Bahmi's Portfolio
+        ✨ Bahmi's Portfolio
     </div>
 
     <!-- Hamburger -->
@@ -38,245 +40,118 @@
         <a href="skills.html">Skills and Strength</a>
         <a href="personal.html">Personal Details</a>
         <a href="Academic.html">Academic Status</a>
-        <a href="courses.html" >Courses & Projects</a>
+        <a href="courses.html">Courses & Projects</a>
         <a href="contact.html" class="active">Contact</a>
     </nav>
-</header>
-
-```
-
 </header>
 
 <!-- =========================
      CONTACT CONTENT
 ========================= -->
+<main class="main-container">
 
-<main class="content">
-
-```
-<!-- =========================
-     CONTACT INFORMATION
-========================= -->
-
-<section class="card contact-details">
-
-    <div class="contact-icon">
-        📞
+    <!-- PAGE HEADER -->
+    <div class="page-heading">
+        <h1 class="title">GET IN TOUCH</h1>
+        <p class="subtitle">Feel free to reach out for collaborations, inquiries, or just to say hello!</p>
     </div>
 
-    <h2>
-        Contact Information
-    </h2>
+    <!-- CONTACT GRID -->
+    <div class="contact-grid">
 
+        <!-- =========================
+             CONTACT INFORMATION
+        ========================= -->
+        <section class="contact-card info-card">
+            <div class="floating-icon">📞</div>
+            <span class="card-tag">DIRECT REACH</span>
+            <h2 class="card-title">Contact Information</h2>
 
-    <div class="info-item">
+            <div class="info-items-stack">
+                <div class="info-row">
+                    <div class="info-icon-circle">📧</div>
+                    <div class="info-detail">
+                        <span class="info-label">EMAIL</span>
+                        <p class="info-value">bahmithabegam@gmail.com</p>
+                    </div>
+                </div>
 
-        <span class="info-icon">
-            📧
-        </span>
+                <div class="info-row">
+                    <div class="info-icon-circle">📱</div>
+                    <div class="info-detail">
+                        <span class="info-label">PHONE</span>
+                        <p class="info-value">9659713688</p>
+                    </div>
+                </div>
 
-        <div>
+                <div class="info-row">
+                    <div class="info-icon-circle">💬</div>
+                    <div class="info-detail">
+                        <span class="info-label">WHATSAPP</span>
+                        <p class="info-value">+91 969713688</p>
+                    </div>
+                </div>
 
-            <h3>Email</h3>
+                <div class="info-row">
+                    <div class="info-icon-circle">📍</div>
+                    <div class="info-detail">
+                        <span class="info-label">LOCATION</span>
+                        <p class="info-value">Madurai, Tamil Nadu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <p>
-                bahmithabegam@gmail.com
-            </p>
+        <!-- =========================
+             CONTACT FORM
+        ========================= -->
+        <section class="contact-card form-card">
+            <div class="floating-icon">✍️</div>
+            <span class="card-tag">SEND A MESSAGE</span>
+            <h2 class="card-title">Contact Me</h2>
 
-        </div>
+            <form>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
 
-    </div>
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
 
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Enter subject">
+                </div>
 
-    <div class="info-item">
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea placeholder="Write your message..." rows="4"></textarea>
+                </div>
 
-        <span class="info-icon">
-            📱
-        </span>
-
-        <div>
-
-            <h3>Phone</h3>
-
-            <p>
-                9659713688
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="info-item">
-
-        <span class="info-icon">
-            💬
-        </span>
-
-        <div>
-
-            <h3>WhatsApp</h3>
-
-            <p>
-                +91 969713688
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="info-item">
-
-        <span class="info-icon">
-            📍
-        </span>
-
-        <div>
-
-            <h3>Location</h3>
-
-            <p>
-                Madurai, Tamil Nadu
-            </p>
-
-        </div>
+                <button type="submit" class="submit-btn">
+                    Send Message ✈️
+                </button>
+            </form>
+        </section>
 
     </div>
 
-</section>
-
-
-
-<!-- =========================
-     CONTACT FORM
-========================= -->
-
-<section class="card form-card">
-
-    <h2>
-        Contact Me
-    </h2>
-
-
-    <form>
-
-
-        <label>
-            Your Name
-        </label>
-
-        <input
-            type="text"
-            placeholder="Enter your name"
-            required
-        >
-
-
-        <label>
-            Your Email
-        </label>
-
-        <input
-            type="email"
-            placeholder="Enter your email"
-            required
-        >
-
-
-        <label>
-            Subject
-        </label>
-
-        <input
-            type="text"
-            placeholder="Enter subject"
-        >
-
-
-        <label>
-            Your Message
-        </label>
-
-        <textarea
-            placeholder="Write your message..."
-            rows="5"
-        ></textarea>
-
-
-        <button type="submit">
-            Send Message ✈️
-        </button>
-
-    </form>
-
-</section>
-```
+    <!-- =========================
+         THANK YOU SECTION
+    ========================= -->
+    <section class="thank-section">
+        <img src="laptop1.png" alt="Laptop" class="thank-img" onerror="this.style.display='none'">
+        <h2 class="thank-title">
+            THANK YOU
+            <span>FOR VISITING MY PROFILE</span>
+        </h2>
+    </section>
 
 </main>
 
-<!-- =========================
-     THANK YOU
-========================= -->
-
-<section class="thank-section">
-
-```
-<img
-    src="laptop1.png"
-    alt="Laptop"
-    class="thank-img"
->
-
-
-<h2 class="thank-text">
-
-    THANK YOU
-
-    <span>
-        FOR VISITING MY PROFILE
-    </span>
-
-</h2>
-
-</section>
-
-<script src="script.js"></script>
-<script>
-  document.querySelector('form').addEventListener('submit', async function (e) {
-    e.preventDefault(); // Page refresh aaguratha thadukkum
-
-    // Input fields-la irunthu values eduthu object-ah matrom
-    const formData = {
-      name: document.querySelector('input[placeholder="Enter your name"]').value,
-      email: document.querySelector('input[placeholder="Enter your email"]').value,
-      subject: document.querySelector('input[placeholder="Enter subject"]').value,
-      message: document.querySelector('textarea[placeholder="Write your message..."]').value
-    };
-
-    try {
-      const response = await fetch('https://newportfolio-backend-g1xh.onrender.com/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const result = await response.json();
-      
-      if (result.success) {
-        alert('Message sent successfully!');
-        this.reset(); // Form-a clear pannidum
-      } else {
-        alert('Failed to send message.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('Could not connect to the server.');
-    }
-  });
-</script>
 <!-- =========================
      FOOTER
 ========================= -->
@@ -284,29 +159,62 @@
     &copy; 2026 Bahmi | <span id="page-name"></span>
 </footer>
 
-<script>
-    // Page URL-a vatchu active page name-a automatic-ah find panrathu
-    const path = window.location.pathname;
-    let pageTitle = "Home"; // Default
+<script src="script.js"></script>
 
-    if (path.includes("skills.html")) {
-        pageTitle = "Skills and Strength";
-    } else if (path.includes("personal.html")) {
-        pageTitle = "Personal Details";
-    } else if (path.includes("Academic.html")) {
-        pageTitle = "Academic Status";
-    } else if (path.includes("courses.html")) {
-        pageTitle = "Courses & Projects";
-    } else if (path.includes("contact.html")) {
-        pageTitle = "Contact";
-    } else if (path.includes("index.html") || path === "/") {
-        pageTitle = "Home";
+<script>
+    // EXACT BACKEND FORM SCRIPT PRESERVED
+    document.querySelector('form').addEventListener('submit', async function (e) {
+        e.preventDefault(); 
+
+        const btn = this.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = "Sending... ⏳";
+        btn.disabled = true;
+
+        const formData = {
+            name: document.querySelector('input[placeholder="Enter your name"]').value,
+            email: document.querySelector('input[placeholder="Enter your email"]').value,
+            subject: document.querySelector('input[placeholder="Enter subject"]').value,
+            message: document.querySelector('textarea[placeholder="Write your message..."]').value
+        };
+
+        try {
+            const response = await fetch('https://newportfolio-backend-g1xh.onrender.com/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                alert('Message sent successfully!');
+                this.reset(); 
+            } else {
+                alert('Failed to send message.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Could not connect to the server.');
+        } finally {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }
+    });
+
+    // Mobile Navbar Toggle
+    function toggleMenu() {
+        const menu = document.getElementById("hamburgerMenu");
+        menu.classList.toggle("show");
     }
 
-    // Span tag-la antha name-a display panrathu
+    // Page Name in Footer
+    const path = window.location.pathname;
+    let pageTitle = "Contact";
     document.getElementById("page-name").innerText = pageTitle;
 </script>
 
 </body>
-
 </html>

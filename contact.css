@@ -1,1078 +1,394 @@
-/* =========================================
-RESET
-========================================= */
+:root {
+    --bg-gradient-start: #311158;
+    --bg-gradient-end: #1e0938;
+    --card-bg: #ffffff;
+    --text-dark: #1e1b4b;
+    --text-body: #4b5563;
+    --text-muted: #6b7280;
+    --purple-primary: #6320a8;
+    --purple-light: #f3e8ff;
+    --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-
-
-margin: 0;
-
-font-family:
-    'Segoe UI',
-    Arial,
-    sans-serif;
-
-min-height: 100vh;
-
- background: linear-gradient(135deg, #2e1065 0%, #3b0764 50%, #1e1b4b 100%);
-
-color: #333;
-
-
+    font-family: var(--font-main);
+    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
-/* =========================================
-NAVBAR
-========================================= */
-
+/* =========================
+   NAVBAR (Matching Gradient)
+========================= */
 .top-nav {
-
-
-width: 100%;
-
-min-height: 70px;
-
-display: flex;
-
-align-items: center;
-
-justify-content: space-between;
-
-padding:
-    15px 30px;
-
-background:
-    linear-gradient(
-        90deg,
-        #7b2ff7,
-        #f107a3,
-        #00c6ff
-    );
-
-box-shadow:
-    0 4px 15px
-    rgba(0,0,0,0.2);
-
-position: sticky;
-
-top: 0;
-
-z-index: 1000;
-
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 5%;
+    background: linear-gradient(90deg, #9b1fe9 0%, #d91485 50%, #4361ee 100%);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
-
-/* Portfolio Name */
 
 .site-name {
-
-
-color: white;
-
-font-size: 28px;
-
-font-weight: bold;
-
-
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
-/* Desktop Navigation */
-
 .nav-menu {
-
-
-display: flex;
-
-align-items: center;
-
-gap: 5px;
-
-
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 }
 
 .nav-menu a {
-
-
-text-decoration: none;
-
-color: white;
-
-font-size: 14px;
-
-padding:
-    10px 12px;
-
-border-radius: 8px;
-
-transition:
-    0.3s;
-
-
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 20px;
+    transition: all 0.25s ease;
 }
 
 .nav-menu a:hover {
-
-
-background:
-    rgba(255,255,255,0.2);
-
-
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-menu a.active {
-
-
-background: white;
-
-color:
-    #7b2ff7;
-
-font-weight: bold;
-
-
+    background: #ffffff;
+    color: var(--purple-primary);
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================================
-HAMBURGER
-========================================= */
-
 .hamburger {
-
-display: none;
-
-width: 32px;
-
-cursor: pointer;
-
-
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .hamburger span {
-
-
-display: block;
-
-height: 3px;
-
-margin: 6px 0;
-
-background: white;
-
-border-radius: 5px;
-
-
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
 }
 
-/* =========================================
-CONTACT CONTENT
-========================================= */
-
-.content {
-
-
-width: 90%;
-
-max-width: 1000px;
-
-margin:
-    60px auto;
-
-display: flex;
-
-justify-content: center;
-
-align-items: stretch;
-
-gap: 35px;
-
-
+/* =========================
+   PAGE CONTAINER & HEADER
+========================= */
+.main-container {
+    flex: 1;
+    max-width: 1050px;
+    width: 90%;
+    margin: 3.5rem auto 4.5rem auto;
 }
 
-/* =========================================
-CARD
-========================================= */
-
-.card {
-
-
-flex: 1;
-
-background:
-    rgba(255,255,255,0.96);
-
-padding:
-    30px;
-
-border-radius:
-    20px;
-
-box-shadow:
-    0 12px 30px
-    rgba(0,0,0,0.12);
-
-border:
-    1px solid #eee;
-
-transition:
-    0.3s;
-
-
+.page-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
 }
 
-.card:hover {
-
-
-transform:
-    translateY(-5px);
-
-box-shadow:
-    0 18px 38px
-    rgba(0,0,0,0.16);
-
+.page-heading .title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
 }
 
-.card h2 {
-
-text-align:
-    center;
-
-color:
-    #6f42c1;
-
-font-size:
-    26px;
-
-margin-bottom:
-    25px;
-
-
+.page-heading .subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
 }
 
-/* =========================================
-CONTACT ICON
-========================================= */
-
-.contact-icon {
-
-
-width:
-    60px;
-
-height:
-    60px;
-
-display:
-    flex;
-
-align-items:
-    center;
-
-justify-content:
-    center;
-
-margin:
-    0 auto 15px;
-
-font-size:
-    30px;
-
-background:
-    #f1eaff;
-
-border-radius:
-    50%;
-
-
+/* =========================
+   CONTACT GRID & CARDS
+========================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 2.5rem;
+    align-items: stretch;
 }
 
-/* =========================================
-CONTACT INFORMATION
-========================================= */
-
-.info-item {
-
-
-display:
-    flex;
-
-align-items:
-    center;
-
-gap:
-    15px;
-
-padding:
-    15px;
-
-margin-bottom:
-    15px;
-
-background:
-    #f1f6fb;
-
-border-left:
-    5px solid #1e73be;
-
-border-radius:
-    9px;
-
-transition:
-    0.3s;
-
-
+.contact-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 2.4rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.info-item:hover {
-
-
-transform:
-    translateX(6px);
-
-background:
-    #edf2ff;
-
-
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
 }
 
-.info-icon {
-
-
-min-width:
-    42px;
-
-height:
-    42px;
-
-display:
-    flex;
-
-align-items:
-    center;
-
-justify-content:
-    center;
-
-background:
-    white;
-
-border-radius:
-    50%;
-
-font-size:
-    20px;
-
-box-shadow:
-    0 4px 10px
-    rgba(0,0,0,0.08);
-
-
+/* Floating Circular Badge */
+.floating-icon {
+    position: absolute;
+    top: -24px;
+    right: 28px;
+    width: 54px;
+    height: 54px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 }
 
-.info-item h3 {
-
-
-margin:
-    0 0 4px;
-
-font-size:
-    15px;
-
-color:
-    #333;
-
-
+.card-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #9333ea;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.35rem;
+    display: inline-block;
 }
 
-.info-item p {
-
-
-margin:
-    0;
-
-font-size:
-    14px;
-
-color:
-    #555;
-
-word-break:
-    break-word;
-
-
+.card-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--purple-primary);
+    margin-bottom: 1.8rem;
 }
 
-/* =========================================
-FORM
-========================================= */
-
-.form-card form {
-
-
-display:
-    flex;
-
-flex-direction:
-    column;
-
-
+/* =========================
+   LEFT CARD: INFO ROWS
+========================= */
+.info-items-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    flex-grow: 1;
+    justify-content: center;
 }
 
-.form-card label {
-
-
-margin-bottom:
-    6px;
-
-font-size:
-    14px;
-
-font-weight:
-    bold;
-
-color:
-    #444;
-
-
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 1rem 1.1rem;
+    background: #f8fafc;
+    border-radius: 14px;
+    border-left: 5px solid var(--purple-primary);
+    transition: all 0.2s ease;
 }
 
-.form-card input,
-.form-card textarea {
-
-
-width:
-    100%;
-
-padding:
-    12px;
-
-margin-bottom:
-    17px;
-
-border:
-    1px solid #ccc;
-
-border-radius:
-    8px;
-
-font-family:
-    inherit;
-
-font-size:
-    14px;
-
-resize:
-    vertical;
-
-outline:
-    none;
-
-transition:
-    0.3s;
-
-
+.info-row:hover {
+    transform: translateX(4px);
+    background: #f1f5f9;
 }
 
-.form-card input:focus,
-.form-card textarea:focus {
-
-
-border-color:
-    #7b2ff7;
-
-box-shadow:
-    0 0 0 3px
-    rgba(123,47,247,0.1);
-
-
+.info-icon-circle {
+    min-width: 42px;
+    height: 42px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
-.form-card button {
-
-
-width:
-    100%;
-
-padding:
-    13px;
-
-border:
-    none;
-
-border-radius:
-    8px;
-
-background:
-    linear-gradient(
-        90deg,
-        #7b2ff7,
-        #f107a3
-    );
-
-color:
-    white;
-
-font-size:
-    15px;
-
-font-weight:
-    bold;
-
-cursor:
-    pointer;
-
-transition:
-    0.3s;
-
-
+.info-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
 }
 
-.form-card button:hover {
-
-
-transform:
-    translateY(-2px);
-
-box-shadow:
-    0 8px 18px
-    rgba(123,47,247,0.25);
-
-
+.info-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.8px;
 }
 
-/* =========================================
-THANK YOU SECTION
-========================================= */
+.info-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.4;
+    word-break: break-word;
+}
 
+/* =========================
+   RIGHT CARD: FORM
+========================= */
+.form-group {
+    margin-bottom: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-group label {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    background: #f8fafc;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--purple-primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 32, 168, 0.12);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.85rem;
+    margin-top: 0.5rem;
+    background: linear-gradient(90deg, #7b2ff7 0%, #d91485 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(123, 47, 247, 0.25);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 47, 247, 0.35);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* =========================
+   THANK YOU SECTION
+========================= */
 .thank-section {
-
-
-width:
-    90%;
-
-max-width:
-    800px;
-
-margin:
-    20px auto 60px;
-
-text-align:
-    center;
-
-padding:
-    20px;
-
-
+    text-align: center;
+    margin: 4.5rem auto 1rem auto;
+    padding: 1.5rem;
 }
 
 .thank-img {
-
-
-width:
-    320px;
-
-max-width:
-    90%;
-
-border-radius:
-    15px;
-
-box-shadow:
-    0 20px 40px
-    rgba(0,0,0,0.25);
-
-border:
-    3px solid white;
-
-margin-bottom:
-    20px;
-
-transition:
-    0.3s;
-
-
+    width: 240px;
+    max-width: 80%;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
 }
 
-.thank-img:hover {
-
-
-transform:
-    scale(1.03);
-
-
+.thank-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
 }
 
-.thank-text {
-
-
-font-size:
-    34px;
-
-font-weight:
-    800;
-
-letter-spacing:
-    2px;
-
-text-transform:
-    uppercase;
-
-color:
-    #2c2c54;
-
-
+.thank-title span {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.05rem;
+    letter-spacing: 3px;
+    color: #f472b6;
+    font-weight: 600;
 }
 
-.thank-text span {
-
-
-display:
-    block;
-
-margin-top:
-    8px;
-
-font-size:
-    18px;
-
-font-weight:
-    500;
-
-letter-spacing:
-    4px;
-
-color:
-    #6f42c1;
-
-
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    padding: 1.8rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* =========================================
-TABLET
-========================================= */
-
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 @media (max-width: 900px) {
-
-
-.site-name {
-
-    font-size:
-        24px;
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }
-
-
-.nav-menu a {
-
-    font-size:
-        13px;
-
-    padding:
-        9px 8px;
-}
-
-
-.content {
-
-    width:
-        94%;
-
-    gap:
-        20px;
-}
-
-
-}
-
-/* =========================================
-MOBILE
-========================================= */
 
 @media (max-width: 768px) {
-
-
-/* Navbar */
-
-.top-nav {
-
-    min-height:
-        65px;
-
-    padding:
-        15px 20px;
-}
-
-
-.site-name {
-
-    font-size:
-        21px;
-}
-
-
-/* Hamburger */
-
-.hamburger {
-
-    display:
-        block;
-}
-
-
-/* Mobile Menu */
-
-.nav-menu {
-
-    display:
-        none;
-
-    position:
-        absolute;
-
-    top:
-        65px;
-
-    right:
-        15px;
-
-    width:
-        250px;
-
-    flex-direction:
-        column;
-
-    align-items:
-        stretch;
-
-    gap:
-        0;
-
-    background:
-        white;
-
-    border-radius:
-        12px;
-
-    overflow:
-        hidden;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,0.25);
-}
-
-
-.nav-menu.show {
-
-    display:
-        flex;
-}
-
-
-.nav-menu a {
-
-    color:
-        #333;
-
-    padding:
-        15px 18px;
-
-    font-size:
-        15px;
-
-    border-bottom:
-        1px solid #eee;
-
-    border-radius:
-        0;
-}
-
-
-.nav-menu a:hover {
-
-    background:
-        #f3efff;
-
-    color:
-        #7b2ff7;
-}
-
-
-.nav-menu a.active {
-
-    background:
-        #7b2ff7;
-
-    color:
-        white;
-}
-
-
-/* Content */
-
-.content {
-
-    width:
-        94%;
-
-    margin:
-        35px auto;
-
-    flex-direction:
-        column;
-
-    gap:
-        20px;
-}
-
-
-.card {
-
-    width:
-        100%;
-
-    padding:
-        22px;
-
-    border-radius:
-        16px;
-        
-}
-
-
-.card h2 {
-
-    font-size:
-        23px;
-}
-
-
-/* Thank You */
-
-.thank-section {
-
-    width:
-        94%;
-
-    margin:
-        10px auto 40px;
-
-    padding:
-        10px;
-}
-
-
-.thank-img {
-
-    width:
-        280px;
-
-    max-width:
-        90%;
-}
-
-
-.thank-text {
-
-    font-size:
-        27px;
-        color: white;
-}
-
-
-.thank-text span {
-
-    font-size:
-        14px;
-    color: palevioletred;
-    letter-spacing:
-        2px;
-}
-
-
-}
-
-/* =========================================
-SMALL MOBILE
-========================================= */
-
-@media (max-width: 480px) {
-
-
-.site-name {
-
-    font-size:
-        19px;
-}
-
-
-.nav-menu {
-
-    width:
-        calc(100% - 30px);
-
-    right:
-        15px;
-}
-
-
-.content {
-
-    width:
-        94%;
-
-    margin:
-        25px auto;
-}
-
-
-.card {
-
-    padding:
-        18px;
-
-    border-radius:
-        14px;
-}
-
-
-.card h2 {
-
-    font-size:
-        21px;
-}
-
-
-.info-item {
-
-    padding:
-        13px;
-
-    gap:
-        10px;
-}
-
-
-.info-icon {
-
-    min-width:
-        38px;
-
-    height:
-        38px;
-
-    font-size:
-        18px;
-}
-
-
-.info-item h3 {
-
-    font-size:
-        14px;
-}
-
-
-.info-item p {
-
-    font-size:
-        12.5px;
-}
-
-
-.form-card input,
-.form-card textarea {
-
-    font-size:
-        13px;
-
-    padding:
-        10px;
-}
-
-
-.form-card button {
-
-    font-size:
-        14px;
-
-    padding:
-        12px;
-}
-
-
-.thank-img {
-
-    width:
-        340px;
-}
-
-
-.thank-text {
-
-    font-size:
-        24px;
-
-    letter-spacing:
-        1px;
-    color: white;
-}
-
-
-.thank-text span {
-
-    font-size:
-        12px;
-
-    letter-spacing:
-        1.5px;
-    color: palevioletred;
-}
-
-
-}.footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  color: #e9d5ff;
-  font-size: 14px;
-  background: #2e1065;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer span {
-  font-weight: bold;
-  color: #f472b6;
-}
-.card {
-  flex: 1;
-  background: rgba(255,255,255,0.96);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  
-  /* 3px ku badhila 1px nu potta small dots varum */
-  border: 1px dotted black; 
-
-  transition: 0.3s;
-}
-.thank-text {
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: white; /* Intha line-a add pannikonga */
-}
-
-.thank-text span {
-  display: block;
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  color: #ffffff; /* Ithayum white-ah mathikonga */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #311158;
+        padding: 1.2rem 5%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .page-heading .title {
+        font-size: 1.8rem;
+    }
+
+    .contact-card {
+        padding: 2rem 1.4rem;
+    }
+
+    .thank-title {
+        font-size: 1.6rem;
+    }
 }
