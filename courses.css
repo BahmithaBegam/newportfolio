@@ -94,7 +94,7 @@ body {
 ========================= */
 .main-container {
     flex: 1;
-    max-width: 900px;
+    max-width: 950px;
     width: 90%;
     margin: 3.5rem auto 4.5rem auto;
 }
@@ -173,7 +173,7 @@ body {
 }
 
 /* =========================
-   LIST & SUB-CARDS
+   ITEM CARDS & LIST
 ========================= */
 .items-list {
     display: flex;
@@ -183,7 +183,7 @@ body {
 
 .item-card {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.2rem;
     padding: 1.25rem 1.4rem;
     background: #f8fafc;
@@ -197,7 +197,7 @@ body {
     background: #f1f5f9;
 }
 
-/* Colored Left Borders */
+/* Custom Colored Borders */
 .border-blue { border-left-color: #0284c7; }
 .border-purple { border-left-color: #7c3aed; }
 .border-pink { border-left-color: #db2777; }
@@ -225,7 +225,7 @@ body {
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
 }
 
 .item-desc {
@@ -234,8 +234,12 @@ body {
     color: var(--text-body);
 }
 
+.item-action {
+    flex-shrink: 0;
+}
+
 /* =========================
-   BUTTONS (GITHUB & LIVE)
+   BUTTONS (VIEW CERTIFICATE, GITHUB, LIVE)
 ========================= */
 .project-actions {
     display: flex;
@@ -248,12 +252,27 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
-    padding: 0.4rem 0.9rem;
+    padding: 0.45rem 1rem;
     border-radius: 20px;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
     transition: all 0.25s ease;
+}
+
+/* View Certificate Button */
+.btn-cert {
+    background: linear-gradient(90deg, #7b2ff7 0%, #d91485 100%);
+    color: #ffffff;
+    box-shadow: 0 3px 10px rgba(123, 47, 247, 0.2);
+}
+
+.btn-cert:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123, 47, 247, 0.35);
 }
 
 .btn-github {
@@ -277,6 +296,78 @@ body {
     color: #4c1d95;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(99, 32, 168, 0.18);
+}
+
+/* =========================
+   CERTIFICATE MODAL POPUP
+========================= */
+.cert-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 1.5rem;
+}
+
+.cert-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cert-modal-card {
+    background: #ffffff;
+    border-radius: 18px;
+    max-width: 650px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 1.4rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+
+.cert-modal-header h3 {
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.cert-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.cert-modal-body {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    background: #f8fafc;
+}
+
+.cert-modal-body img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================
@@ -331,8 +422,20 @@ body {
         font-size: 1.25rem;
     }
 
+    /* Stack buttons under text on small screens */
     .item-card {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 0.9rem;
         padding: 1.1rem;
+    }
+
+    .item-action {
+        width: 100%;
+    }
+
+    .btn-cert {
+        width: 100%;
+        justify-content: center;
     }
 }

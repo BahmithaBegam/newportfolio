@@ -66,12 +66,18 @@
             <h2 class="section-title">Courses Completed</h2>
 
             <div class="items-list">
+                
                 <!-- Course 1 -->
                 <div class="item-card border-blue">
                     <div class="item-icon">💻</div>
                     <div class="item-details">
                         <h3 class="item-name">Web Development - Offline</h3>
-                        <p class="item-desc">HTML, CSS, JavaScript & Web Applications – V7 LANCERS</p>
+                        <p class="item-desc">HTML, CSS, JavaScript & Web Applications - V7 LANCERS</p>
+                    </div>
+                    <div class="item-action">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/V7.jpeg', 'Web Development - V7 LANCERS')">
+                            <i class="fas fa-certificate"></i> View Certificate
+                        </button>
                     </div>
                 </div>
 
@@ -82,6 +88,11 @@
                         <h3 class="item-name">Python Programming - Online</h3>
                         <p class="item-desc">Learn basic to Advanced python programming - INTERNPE</p>
                     </div>
+                    <div class="item-action">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/python_cert.jpg', 'Python Programming - INTERNPE')">
+                            <i class="fas fa-certificate"></i> View Certificate
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Course 3 -->
@@ -90,6 +101,11 @@
                     <div class="item-details">
                         <h3 class="item-name">Android Application - Offline</h3>
                         <p class="item-desc">Designed responsive and user-friendly App pages - TOTAL PLANT ENGINEERING DESIGN</p>
+                    </div>
+                    <div class="item-action">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/android_cert.jpg', 'Android Application - TOTAL PLANT ENGINEERING')">
+                            <i class="fas fa-certificate"></i> View Certificate
+                        </button>
                     </div>
                 </div>
 
@@ -100,6 +116,11 @@
                         <h3 class="item-name">Generative AI and AI Agent - Online</h3>
                         <p class="item-desc">Focus on creating content like text, images and code - IBM skillsBuild</p>
                     </div>
+                    <div class="item-action">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/genai_cert.jpg', 'Generative AI - IBM SkillsBuild')">
+                            <i class="fas fa-certificate"></i> View Certificate
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Course 5 -->
@@ -109,7 +130,13 @@
                         <h3 class="item-name">Java Programming - Online</h3>
                         <p class="item-desc">Learn Core Java and Advanced Java Programming - UDEMY</p>
                     </div>
+                    <div class="item-action">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/java_cert.jpg', 'Java Programming - UDEMY')">
+                            <i class="fas fa-certificate"></i> View Certificate
+                        </button>
+                    </div>
                 </div>
+
             </div>
         </section>
 
@@ -206,15 +233,63 @@
 </main>
 
 <!-- =========================
+     CERTIFICATE IMAGE MODAL POPUP
+========================= -->
+<div class="cert-modal-overlay" id="certModal" onclick="closeCertModal(event)">
+    <div class="cert-modal-card">
+        <div class="cert-modal-header">
+            <h3 id="modalCertTitle">Certificate View</h3>
+            <button type="button" class="cert-modal-close" onclick="document.getElementById('certModal').classList.remove('active')">&times;</button>
+        </div>
+        <div class="cert-modal-body">
+            <img id="modalCertImg" src="" alt="Certificate Preview">
+        </div>
+    </div>
+</div>
+
+<!-- =========================
      FOOTER
 ========================= -->
 <footer class="footer">
     &copy; 2026 Bahmi | <span id="page-name"></span>
 </footer>
 
+<!-- =========================
+     SCRIPTS
+========================= -->
+<script src="script.js"></script>
 <script>
+    // Certificate Modal Open
+    function openCertModal(imageSrc, title) {
+        const modal = document.getElementById('certModal');
+        const modalImg = document.getElementById('modalCertImg');
+        const modalTitle = document.getElementById('modalCertTitle');
+        
+        if (modal && modalImg && modalTitle) {
+            modalImg.src = imageSrc;
+            modalTitle.innerText = title;
+            modal.classList.add('active');
+        }
+    }
+
+    // Certificate Modal Close when clicking background
+    function closeCertModal(event) {
+        if (event.target.id === 'certModal') {
+            document.getElementById('certModal').classList.remove('active');
+        }
+    }
+
+    // Mobile Navbar Toggle
+    function toggleMenu() {
+        const menu = document.getElementById("hamburgerMenu");
+        if (menu) {
+            menu.classList.toggle("show");
+        }
+    }
+
+    // Dynamic Active Page Title in Footer
     const path = window.location.pathname;
-    let pageTitle = "Home";
+    let pageTitle = "Courses & Projects";
 
     if (path.includes("skills.html")) {
         pageTitle = "Skills and Strength";
@@ -230,10 +305,11 @@
         pageTitle = "Home";
     }
 
-    document.getElementById("page-name").innerText = pageTitle;
+    const pageNameEl = document.getElementById("page-name");
+    if (pageNameEl) {
+        pageNameEl.innerText = pageTitle;
+    }
 </script>
-
-<script src="script.js"></script>
 
 </body>
 </html>
