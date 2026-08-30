@@ -422,4 +422,80 @@ body {
         width: 210px;
         height: 210px;
     }
+    
+}
+/* ================= PROFILE IMAGE & GLOWING BORDER ================= */
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Glowing Rotating/Pulsing Outer Wrapper */
+.image-border-glow {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    padding: 7px;
+    background: linear-gradient(135deg, #f72585 0%, #7209b7 35%, #4361ee 70%, #4cc9f0 100%);
+    
+    /* Multi-layered High-Intensity Glow */
+    box-shadow: 
+        0 0 25px rgba(247, 37, 133, 0.45),
+        0 0 50px rgba(114, 9, 183, 0.35),
+        0 0 80px rgba(67, 97, 238, 0.25),
+        0 15px 35px rgba(0, 0, 0, 0.5);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: floatingGlow 4s ease-in-out infinite alternate;
+}
+
+/* Hover Effect */
+.image-border-glow:hover {
+    transform: scale(1.04);
+    box-shadow: 
+        0 0 35px rgba(247, 37, 133, 0.7),
+        0 0 70px rgba(114, 9, 183, 0.55),
+        0 0 100px rgba(67, 97, 238, 0.45),
+        0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background-color: #1e0938;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth Floating Pulse Animation */
+@keyframes floatingGlow {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 
+            0 0 25px rgba(247, 37, 133, 0.4),
+            0 0 50px rgba(114, 9, 183, 0.3),
+            0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: translateY(-8px);
+        box-shadow: 
+            0 0 35px rgba(247, 37, 133, 0.65),
+            0 0 70px rgba(114, 9, 183, 0.5),
+            0 20px 45px rgba(0, 0, 0, 0.5);
+    }
+}
+@media (max-width: 768px) {
+    .image-border-glow {
+        width: 270px;
+        height: 270px;
+        padding: 5px;
+    }
 }
