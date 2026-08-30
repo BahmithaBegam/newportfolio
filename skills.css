@@ -1,682 +1,268 @@
-/* =========================================
-RESET
-========================================= */
+:root {
+    --bg-gradient-start: #311158;
+    --bg-gradient-end: #1e0938;
+    --card-bg: #ffffff;
+    --text-dark: #1e1b4b;
+    --text-body: #4b5563;
+    --text-muted: #6b7280;
+    --purple-primary: #6320a8;
+    --purple-light: #f3e8ff;
+    --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-
-
-margin: 0;
-
-font-family:
-    'Segoe UI',
-    Arial,
-    sans-serif;
-
- background: linear-gradient(135deg, #2e1065 0%, #3b0764 50%, #1e1b4b 100%);
-
-min-height: 100vh;
-
-color: #333;
-
-
+    font-family: var(--font-main);
+    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
-/* =========================================
-NAVBAR
-========================================= */
-
+/* =========================
+   NAVBAR (Exact Theme)
+========================= */
 .top-nav {
-
-
-width: 100%;
-
-min-height: 70px;
-
-display: flex;
-
-align-items: center;
-
-justify-content: space-between;
-
-padding: 15px 30px;
-
-background:
-    linear-gradient(
-        90deg,
-        #7b2ff7,
-        #f107a3,
-        #00c6ff
-    );
-
-box-shadow:
-    0 4px 15px
-    rgba(0,0,0,0.2);
-
-position: sticky;
-
-top: 0;
-
-z-index: 1000;
-
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 5%;
+    background: linear-gradient(90deg, #9b1fe9 0%, #d91485 50%, #4361ee 100%);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
-
-/* Portfolio Name */
 
 .site-name {
-
-
-color: white;
-
-font-size: 28px;
-
-font-weight: bold;
-
-
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
-/* Desktop Menu */
-
 .nav-menu {
-
-
-display: flex;
-
-align-items: center;
-
-gap: 5px;
-
-
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 }
 
 .nav-menu a {
-
-
-text-decoration: none;
-
-color: white;
-
-font-size: 14px;
-
-padding:
-    10px 12px;
-
-border-radius: 8px;
-
-transition:
-    0.3s;
-
-
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 0.45rem 1rem;
+    border-radius: 20px;
+    transition: all 0.25s ease;
 }
 
 .nav-menu a:hover {
-
-
-background:
-    rgba(255,255,255,0.2);
-
-
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
 }
 
+/* Active Pill Matching the Academic UI */
 .nav-menu a.active {
-
-
-background: white;
-
-color: #7b2ff7;
-
-font-weight: bold;
-
-
+    background: #ffffff;
+    color: var(--purple-primary);
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-
-/* =========================================
-HAMBURGER
-========================================= */
 
 .hamburger {
-
-
-display: none;
-
-width: 32px;
-
-cursor: pointer;
-
-
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .hamburger span {
-
-display: block;
-
-height: 3px;
-
-margin: 6px 0;
-
-background: white;
-
-border-radius: 5px;
-
-
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
 }
 
-/* =========================================
-MAIN CONTAINER
-========================================= */
-
-.container {
-
-
-width: 90%;
-
-max-width: 900px;
-
-margin:
-    50px auto;
-
-padding: 10px;
-
-
+/* =========================
+   PAGE HEADER
+========================= */
+.main-container {
+    flex: 1;
+    max-width: 1180px;
+    width: 90%;
+    margin: 3.5rem auto 4.5rem auto;
 }
 
-/* =========================================
-CARD
-========================================= */
-
-.card {
-
-
-background: white;
-
-border-radius: 20px;
-
-padding: 30px;
-
-margin-bottom: 30px;
-
-box-shadow:
-    0 12px 30px
-    rgba(0,0,0,0.10);
-
-border:
-    1px solid #eee;
-
-transition:
-    0.3s;
-
-
+.page-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
 }
 
-.card:hover {
-
-
-transform:
-    translateY(-5px);
-
-box-shadow:
-    0 18px 35px
-    rgba(0,0,0,0.15);
-
-
+.page-heading .title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
 }
 
-/* Card Heading */
-
-.card h2 {
-
-
-margin-bottom: 25px;
-
-font-size: 28px;
-
-color: #6f42c1;
-
-text-align: center;
-
+.page-heading .subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 400;
 }
 
-/* =========================================
-SKILLS
-========================================= */
-
-.skill {
-
-
-margin-bottom: 25px;
-
-
+/* =========================
+   SKILLS GRID & CARDS
+========================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
 }
 
-.skill:last-child {
-
-
-margin-bottom: 5px;
-
-
+.skill-box {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 2.2rem 2.2rem 2rem 2.2rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Skill title */
-
-.skill-title {
-
-
-display: flex;
-
-justify-content:
-    space-between;
-
-align-items: center;
-
-margin-bottom: 8px;
-
-
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
 }
 
-.skill-title p {
-
-
-margin: 0;
-
-font-weight: bold;
-
-font-size: 16px;
-
-color: #333;
-
-
+/* Floating Circular Badge on Top-Right */
+.floating-icon {
+    position: absolute;
+    top: -24px;
+    right: 28px;
+    width: 54px;
+    height: 54px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 }
 
-.skill-title span {
-
-
-font-size: 14px;
-
-font-weight: bold;
-
-color: #7b2ff7;
-
-
+.box-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
-/* Progress background */
-
-.progress {
-
-
-width: 100%;
-
-height: 13px;
-
-background: #e5e5e5;
-
-border-radius: 20px;
-
-overflow: hidden;
-
-
+.box-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #9333ea;
+    letter-spacing: 1px;
+    margin-bottom: 0.35rem;
+    display: inline-block;
 }
 
-/* Progress bar */
-
-.progress-bar {
-
-
-height: 100%;
-
-border-radius: 20px;
-
-background:
-    linear-gradient(
-        to right,
-        #254068,
-        #88208b
-    );
-
-transition:
-    width 1s ease;
-
-
+.box-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--purple-primary);
+    margin-bottom: 0.4rem;
 }
 
-/* Skill percentages */
-
-.html {
-width: 85%;
+.box-subtitle {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.9rem;
 }
 
-.css {
-width: 75%;
+.box-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-body);
+    margin-bottom: 1.5rem;
+    flex: 1;
 }
 
-.java {
-width: 60%;
+/* CHIPS */
+.chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #e2e8f0;
 }
 
-.git {
-width: 55%;
+.chip {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #5b21b6;
+    background: var(--purple-light);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
 }
 
-/* =========================================
-STRENGTHS
-========================================= */
-
-.strength {
-
-
-background:
-    linear-gradient(
-        90deg,
-        #0f4597,
-        #88378a
-    );
-
-color: white;
-
-padding: 17px 20px;
-
-border-radius: 14px;
-
-margin-bottom: 15px;
-
-font-size: 16px;
-
-font-weight: 500;
-
-border:
-    2px dotted
-    rgba(255,255,255,0.8);
-
-box-shadow:
-    0 8px 18px
-    rgba(15,69,151,0.20);
-
-transition:
-    0.3s;
-
-
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    padding: 1.8rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.strength:hover {
-
-
-transform:
-    translateX(8px);
-
-box-shadow:
-    0 12px 25px
-    rgba(15,69,151,0.30);
-
-
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 960px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 }
-
-/* =========================================
-TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-
-.site-name {
-
-    font-size: 24px;
-}
-
-.nav-menu a {
-
-    font-size: 13px;
-
-    padding:
-        9px 8px;
-}
-
-
-}
-
-/* =========================================
-MOBILE
-========================================= */
 
 @media (max-width: 768px) {
-
-
-/* Navbar */
-
-.top-nav {
-
-    min-height: 65px;
-
-    padding:
-        15px 20px;
-}
-
-.site-name {
-
-    font-size: 21px;
-}
-
-
-/* Hamburger */
-
-.hamburger {
-
-    display: block;
-}
-
-
-/* Mobile Menu */
-
-.nav-menu {
-
-    display: none;
-
-    position: absolute;
-
-    top: 65px;
-
-    right: 15px;
-
-    width: 250px;
-
-    flex-direction: column;
-
-    align-items: stretch;
-
-    gap: 0;
-
-    background: white;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,0.25);
-}
-
-
-.nav-menu.show {
-
-    display: flex;
-}
-
-
-.nav-menu a {
-
-    color: #333;
-
-    padding:
-        15px 18px;
-
-    font-size: 15px;
-
-    border-bottom:
-        1px solid #eee;
-
-    border-radius: 0;
-}
-
-
-.nav-menu a:hover {
-
-    background: #f3efff;
-
-    color: #7b2ff7;
-}
-
-
-.nav-menu a.active {
-
-    background: #7b2ff7;
-
-    color: white;
-}
-
-
-/* Main */
-
-.container {
-
-    width: 94%;
-
-    margin:
-        30px auto;
-
-    padding: 5px;
-}
-
-
-/* Card */
-
-.card {
-
-    padding: 22px;
-
-    margin-bottom: 22px;
-
-    border-radius: 16px;
-}
-
-
-.card h2 {
-
-    font-size: 24px;
-
-    margin-bottom: 22px;
-}
-
-
-/* Skills */
-
-.skill-title p {
-
-    font-size: 15px;
-}
-
-.skill-title span {
-
-    font-size: 13px;
-}
-
-
-.progress {
-
-    height: 11px;
-}
-
-
-/* Strengths */
-
-.strength {
-
-    font-size: 14px;
-
-    padding:
-        14px 15px;
-}
-
-
-}
-
-/* =========================================
-SMALL MOBILE
-========================================= */
-
-@media (max-width: 480px) {
-
-.site-name {
-
-    font-size: 19px;
-}
-
-.nav-menu {
-
-    width:
-        calc(100% - 30px);
-
-    right: 15px;
-}
-
-
-.container {
-
-    width: 94%;
-
-    margin:
-        25px auto;
-}
-
-
-.card {
-
-    padding: 18px;
-}
-
-
-.card h2 {
-
-    font-size: 22px;
-}
-
-
-.skill-title p {
-
-    font-size: 14px;
-}
-
-
-.skill-title span {
-
-    font-size: 12px;
-}
-
-
-.strength {
-
-    font-size: 13px;
-
-    padding: 13px;
-}
-
-
-}.footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  color: #e9d5ff;
-  font-size: 14px;
-  background: #2e1065;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer span {
-  font-weight: bold;
-  color: #f472b6;
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #311158;
+        padding: 1.2rem 5%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .page-heading .title {
+        font-size: 1.8rem;
+    }
+
+    .skill-box {
+        padding: 2rem 1.5rem 1.8rem 1.5rem;
+    }
 }
