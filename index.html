@@ -8,6 +8,11 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -33,65 +38,106 @@
         <a href="skills.html">Skills and Strength</a>
         <a href="personal.html">Personal Details</a>
         <a href="Academic.html">Academic Status</a>
-        <a href="courses.html">Courses Completed</a>
+        <a href="courses.html">Courses & Projects</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
 <!-- ================= HERO SECTION ================= -->
-<section class="hero">
-    
+<main class="main-wrapper">
+    <section class="hero-section">
+        <!-- Hero Left / Text Content -->
+        <div class="hero-text">
+            <span class="greeting">Welcome to my portfolio</span>
+            <h1 class="hero-name">I'm Bahmitha Begam</h1>
+            <h3 class="hero-role">Computer Science & Engineering Student</h3>
+            <p class="hero-bio">
+                Passionate about Web Development, Android Application Development, and building responsive, user-friendly digital experiences.
+            </p>
 
-    <!-- Introduction -->
-    <div class="hero-text">
-        <h1>Hello Guys....</h1>
-        <h1>I'm Bahmitha Begam</h1>
-        <h3>Student of Computer Science and Engineering</h3>
-        <p>Web Developer | Android Application Developer</p>
+            <!-- Action Buttons & Socials -->
+            <div class="hero-actions">
+                <a href="contact.html" class="btn-primary">Get In Touch</a>
+                <a href="courses.html" class="btn-secondary">View Work</a>
+            </div>
 
-        <!-- Social Media -->
-        <div class="icons">
-            <a href="https://www.facebook.com/yourprofile" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/bahmitha-begam-k-819504328?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.instagram.com/_bahmi_156?igsh=MXM0bzIweTF0NDB1YQ==" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://github.com/BahmithaBegam" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/bahmitha-begam-k-819504328" target="_blank" aria-label="LinkedIn" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/BahmithaBegam" target="_blank" aria-label="GitHub" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/_bahmi_156" target="_blank" aria-label="Instagram" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
         </div>
-    </div>
-     <!-- Profile Image -->
-    <div class="hero-img">
-        <img src="b2.jpeg" alt="Bahmitha Begam">
-    </div>
-</section>
 
-<!-- ================= ABOUT SECTION ================= -->
-<section class="content">
-    <!-- About Me -->
-    <div class="box">
-        <h2>About Me</h2>
-        <p>
-            I am a student of Anna University Regional Campus
-            in the department of Computer Science and Engineering.
-            I am interested in the field of web development and
-            Java programming, Web Development and Networking.
-        </p>
-    </div>
+        <!-- Hero Right / Profile Image with Glowing Border -->
+        <div class="hero-image-wrapper">
+            <div class="image-border-glow">
+                <img src="b2.jpeg" alt="Bahmitha Begam" class="profile-img">
+            </div>
+        </div>
+    </section>
 
-    <!-- Basic Details -->
-    <div class="box">
-        <h2>Basic Details</h2>
-        <p><b>Email:</b> bahmithabegam@gmail.com</p>
-        <p><b>Mobile:</b> 9659713688</p>
-        <p><b>Address:</b> Madurai, Tamil Nadu</p>
-    </div>
-</section>
+    <!-- ================= ABOUT & DETAILS CARDS ================= -->
+    <section class="overview-grid">
+        
+        <!-- About Me Card -->
+        <article class="info-card">
+            <div class="floating-icon">👩‍💻</div>
+            <span class="card-tag">PROFILE OVERVIEW</span>
+            <h2 class="card-title">About Me</h2>
+            <h3 class="card-subtitle">Anna University Regional Campus, Madurai</h3>
+            <p class="card-text">
+                Currently pursuing my degree in Computer Science and Engineering. Dedicated to creating responsive web applications, learning modern frontend and backend architectures, and developing practical software solutions.
+            </p>
+            <div class="card-pills">
+                <span class="pill">Web Development</span>
+                <span class="pill">Android Dev</span>
+                <span class="pill">Java Programming</span>
+            </div>
+        </article>
+
+        <!-- Basic Details Card -->
+        <article class="info-card">
+            <div class="floating-icon">📍</div>
+            <span class="card-tag">CONTACT & LOCATION</span>
+            <h2 class="card-title">Basic Details</h2>
+            <h3 class="card-subtitle">Available for Opportunities & Projects</h3>
+            
+            <div class="details-list">
+                <div class="detail-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <span class="label">Email</span>
+                        <p class="val">bahmithabegam@gmail.com</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <span class="label">Phone</span>
+                        <p class="val">+91 96597 13688</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span class="label">Location</span>
+                        <p class="val">Madurai, Tamil Nadu, India</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+</main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -109,7 +155,7 @@
     } else if (path.includes("Academic.html")) {
         pageTitle = "Academic Status";
     } else if (path.includes("courses.html")) {
-        pageTitle = "Courses Completed";
+        pageTitle = "Courses & Projects";
     } else if (path.includes("contact.html")) {
         pageTitle = "Contact";
     } else if (path.includes("index.html") || path === "/") {
