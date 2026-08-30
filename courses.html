@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses and Projects</title>
+    <title>Courses & Projects | Bahmi's Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="courses.css">
-    <style>
-        /* Bottom-la space iruka and vertical scroll smooth-ah iruka styles */
-        .content {
-            display: flex;
-            flex-direction: column;
-            gap: 40px; /* Rendu sections-kum middle-la gap varum */
-            padding-bottom: 50px;
-        }
-    </style>
 </head>
+
 <body>
 
 <!-- =========================
-     NAVBAR`
+     NAVBAR
 ========================= -->
 <header class="top-nav">
     <div class="site-name">
-        Bahmi's Portfolio
+        ✨ Bahmi's Portfolio
     </div>
 
     <!-- Hamburger -->
@@ -32,7 +34,7 @@
         <span></span>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation Menu -->
     <nav class="nav-menu" id="hamburgerMenu">
         <a href="index.html">Home</a>
         <a href="skills.html">Skills and Strength</a>
@@ -44,126 +46,163 @@
 </header>
 
 <!-- =========================
-     CONTENT (Vertical Scroll Layout)
+     MAIN CONTENT
 ========================= -->
-<main class="content">
-    
-    <!-- SECTION 1: COURSES COMPLETED -->
-    <section class="card">
-        <h2>
-            Courses Completed
-        </h2>
-        
-        <div class="course">
-            <div class="course-icon">💻</div>
-            <div>
-                <h3>Web Development - Offline</h3>
-                <p>HTML, CSS, JavaScript & Web Applications – V7 LANCERS</p>
-            </div>
-        </div>
+<main class="main-container">
 
-        <div class="course">
-            <div class="course-icon">🔐</div>
-            <div>
-                <h3>Python Programming - Online</h3>
-                <p>Learn basic to Advanced python programming - INTERNPE</p>
-            </div>
-        </div>
-
-        <div class="course">
-            <div class="course-icon">🛡️</div>
-            <div>
-                <h3>Android Application - Offline</h3>
-                <p>Designed responsive and user friendly App pages - TOTAL PLANT ENGINEERING DESIGN</p>
-            </div>
-        </div>
-
-        <div class="course">
-            <div class="course-icon">☁️</div>
-            <div>
-                <h3>Generative AI and AI Agent - Online</h3>
-                <p>Focus on creating a content like text, images and code - IBM skillsBuild</p>
-            </div>
-        </div>
-        <div class="course">
-    <div class="course-icon">☕</div>
-    <div>
-        <h3>Java Programming - Online</h3>
-        <p>Learn Core Java and Advanced Java Programming - UDEMY</p>
+    <!-- PAGE HEADER -->
+    <div class="page-heading">
+        <h1 class="title">COURSES & PROJECTS</h1>
+        <p class="subtitle">A showcase of technical learning certifications and real-world software builds</p>
     </div>
-</div>
-    </section>
 
-    <!-- SECTION 2: PROJECTS COMPLETED (Appears strictly at the bottom) -->
-    <section class="card">
-        <h2>
-            Projects Completed
-        </h2>
+    <!-- STACK CONTAINER -->
+    <div class="content-stack">
 
-        <!-- Project 1 -->
-        <div class="course">
-            <div class="course-icon">🚀</div>
-            <div>
-                <h3>Personal Portfolio Website - Full Stack</h3>
-                <p>Built a fully responsive multi-page portfolio with HTML, CSS, JavaScript frontend, connected to Node.js & Express backend, with MongoDB storage and Nodemailer contact form integration.</p>
+        <!-- ================= SECTION 1: COURSES COMPLETED ================= -->
+        <section class="main-card">
+            <div class="floating-badge">📜</div>
+            <span class="section-tag">CERTIFICATIONS</span>
+            <h2 class="section-title">Courses Completed</h2>
+
+            <div class="items-list">
+                <!-- Course 1 -->
+                <div class="item-card border-blue">
+                    <div class="item-icon">💻</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Web Development - Offline</h3>
+                        <p class="item-desc">HTML, CSS, JavaScript & Web Applications – V7 LANCERS</p>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="item-card border-purple">
+                    <div class="item-icon">🔐</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Python Programming - Online</h3>
+                        <p class="item-desc">Learn basic to Advanced python programming - INTERNPE</p>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="item-card border-pink">
+                    <div class="item-icon">🛡️</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Android Application - Offline</h3>
+                        <p class="item-desc">Designed responsive and user-friendly App pages - TOTAL PLANT ENGINEERING DESIGN</p>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="item-card border-teal">
+                    <div class="item-icon">☁️</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Generative AI and AI Agent - Online</h3>
+                        <p class="item-desc">Focus on creating content like text, images and code - IBM skillsBuild</p>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="item-card border-orange">
+                    <div class="item-icon">☕</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Java Programming - Online</h3>
+                        <p class="item-desc">Learn Core Java and Advanced Java Programming - UDEMY</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Project 2 -->
-        <div class="course">
-            <div class="course-icon">📱</div>
-            <div>
-                <h3>Android Testing Application</h3>
-                <p>Developed an application featuring sensor and device data integration modules including Anemometer, ADCP, GPS, and LPA.</p>
+        <!-- ================= SECTION 2: PROJECTS COMPLETED ================= -->
+        <section class="main-card">
+            <div class="floating-badge">🚀</div>
+            <span class="section-tag">PORTFOLIO WORK</span>
+            <h2 class="section-title">Projects Completed</h2>
+
+            <div class="items-list">
+                
+                <!-- Project 1: Portfolio -->
+                <div class="item-card border-purple">
+                    <div class="item-icon">🌐</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Personal Portfolio Website - Full Stack</h3>
+                        <p class="item-desc">Built a fully responsive multi-page portfolio with HTML, CSS, JavaScript frontend, connected to Node.js & Express backend, with MongoDB storage and Nodemailer contact form integration.</p>
+                        <div class="project-actions">
+                            <a href="https://bahmithabegam.github.io/newportfolio/" target="_blank" class="btn btn-github"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://newportfolio-1-ajd5.onrender.com" target="_blank" class="btn btn-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Restaurant POS -->
+                <div class="item-card border-blue">
+                    <div class="item-icon">💳</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Restaurant POS & Billing Management System</h3>
+                        <p class="item-desc">Built a management system to handle restaurant orders, calculate dynamic bill totals, and streamline receipt printing and transactions efficiently.</p>
+                        <div class="project-actions">
+                            <a href="https://bahmithabegam.github.io/Restaurant/" target="_blank" class="btn btn-github"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Parent & Community -->
+                <div class="item-card border-orange">
+                    <div class="item-icon">🤝</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Parent and Community Engagement in Education</h3>
+                        <p class="item-desc">Designed a platform or layout focused on strengthening communication and collaboration between parents, communities, and educational institutions.</p>
+                        <div class="project-actions">
+                            <a href="https://bahmithabegam.github.io/parent-community-website/" target="_blank" class="btn btn-github"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Zylo E-Commerce -->
+                <div class="item-card border-pink">
+                    <div class="item-icon">🛒</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Zylo E-Commerce Platform</h3>
+                        <p class="item-desc">Developed an e-commerce website with product browsing, shopping cart, user authentication, and order management features.</p>
+                        <div class="project-actions">
+                            <a href="https://bahmithabegam.github.io/zylo-ecommerce/" target="_blank" class="btn btn-github"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://zylo-ecommerce-1.onrender.com" target="_blank" class="btn btn-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Anemometer -->
+                <div class="item-card border-teal">
+                    <div class="item-icon">📱</div>
+                    <div class="item-details">
+                        <h3 class="item-name">Android Testing Application (Anemometer)</h3>
+                        <p class="item-desc">Developed an application featuring sensor and device data integration modules including Anemometer, ADCP, GPS, and LPA.</p>
+                        <div class="project-actions">
+                            <a href="https://bahmithabegam.github.io/Anemometer/" target="_blank" class="btn btn-github"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Task Management -->
+                <div class="item-card border-purple">
+                    <div class="item-icon">📋</div>
+                    <div class="item-details">
+                        <h3 class="item-name">TaskFlow - Task Management Web App</h3>
+                        <p class="item-desc">Built a task management webpage to create, update, read, and manage tasks efficiently with user authentication and CRUD operations.</p>
+                        <div class="project-actions">
+                            <a href="https://bahmithabegam.github.io/task-management/" target="_blank" class="btn btn-github"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://task-management-theta-inky.vercel.app" target="_blank" class="btn btn-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </section>
 
-        <!-- Project 3 -->
-        <div class="course">
-            <div class="course-icon">🖼️</div>
-            <div>
-                <h3>Dynamic Image Slider</h3>
-                <p>Created an interactive and responsive image slider using frontend technologies with smooth transitions and controls.</p>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="course">
-            <div class="course-icon">🤝</div>
-            <div>
-                <h3>Parent and Community Engagement in Education</h3>
-                <p>Designed a platform or layout focused on strengthening communication and collaboration between parents, communities, and educational institutions.</p>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="course">
-            <div class="course-icon">💳</div>
-            <div>
-                <h3>Restaurant POS & Billing Management System</h3>
-                <p>Built a management system to handle restaurant orders, billing processes, and transaction management efficiently.</p>
-            </div>
-        </div>
-        <!-- Project 6 -->
-        <div class="course">
-          <div class="course-icon">📋</div>
-        <div>
-        <h3>Task Management webpage</h3>
-        <p>Built a task management webpage to create, update, read, and manage tasks efficiently with user authentication and CRUD operations.</p>
-        </div>
-</div>
-
-<!-- Project 7 -->
-<div class="course">
-    <div class="course-icon">🛒</div>
-    <div>
-        <h3>E-Commerce Website</h3>
-        <p>Developed an e-commerce website with product browsing, shopping cart, user authentication, and order management features.</p>
     </div>
-</div>
-    </section>
 
 </main>
+
 <!-- =========================
      FOOTER
 ========================= -->
@@ -172,9 +211,8 @@
 </footer>
 
 <script>
-    // Page URL-a vatchu active page name-a automatic-ah find panrathu
     const path = window.location.pathname;
-    let pageTitle = "Home"; // Default
+    let pageTitle = "Home";
 
     if (path.includes("skills.html")) {
         pageTitle = "Skills and Strength";
@@ -190,7 +228,6 @@
         pageTitle = "Home";
     }
 
-    // Span tag-la antha name-a display panrathu
     document.getElementById("page-name").innerText = pageTitle;
 </script>
 

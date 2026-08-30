@@ -1,772 +1,338 @@
-/* =========================================
-RESET
-========================================= */
+:root {
+    --bg-gradient-start: #311158;
+    --bg-gradient-end: #1e0938;
+    --card-bg: #ffffff;
+    --text-dark: #1e1b4b;
+    --text-body: #4b5563;
+    --text-muted: #6b7280;
+    --purple-primary: #6320a8;
+    --purple-light: #f3e8ff;
+    --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-
-
-margin: 0;
-
-font-family:
-    'Segoe UI',
-    Arial,
-    sans-serif;
-
-min-height: 100vh;
-
- background: linear-gradient(135deg, #2e1065 0%, #3b0764 50%, #1e1b4b 100%);
-
-color: #333;
-
-
+    font-family: var(--font-main);
+    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
-/* =========================================
-NAVBAR
-========================================= */
-
+/* =========================
+   NAVBAR
+========================= */
 .top-nav {
-
-
-width: 100%;
-
-min-height: 70px;
-
-display: flex;
-
-align-items: center;
-
-justify-content: space-between;
-
-padding:
-    15px 30px;
-
-background:
-    linear-gradient(
-        90deg,
-        #7b2ff7,
-        #f107a3,
-        #00c6ff
-    );
-
-box-shadow:
-    0 4px 15px
-    rgba(0,0,0,0.2);
-
-position: sticky;
-
-top: 0;
-
-z-index: 1000;
-
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 5%;
+    background: linear-gradient(90deg, #9b1fe9 0%, #d91485 50%, #4361ee 100%);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
-
-/* Portfolio Name */
 
 .site-name {
-
-color: white;
-
-font-size: 28px;
-
-font-weight: bold;
-
-
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
-/* Desktop Menu */
-
 .nav-menu {
-
-
-display: flex;
-
-align-items: center;
-
-gap: 5px;
-
-
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 }
 
 .nav-menu a {
-
-text-decoration: none;
-
-color: white;
-
-font-size: 14px;
-
-padding:
-    10px 12px;
-
-border-radius: 8px;
-
-transition:
-    0.3s;
-
-
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 20px;
+    transition: all 0.25s ease;
 }
 
 .nav-menu a:hover {
-
-background:
-    rgba(255,255,255,0.2);
-
-
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-menu a.active {
-
-
-background: white;
-
-color:
-    #7b2ff7;
-
-font-weight: bold;
-
-
+    background: #ffffff;
+    color: var(--purple-primary);
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================================
-HAMBURGER
-========================================= */
-
 .hamburger {
-
-display: none;
-
-width: 32px;
-
-cursor: pointer;
-
-
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .hamburger span {
-
-
-display: block;
-
-height: 3px;
-
-margin: 6px 0;
-
-background: white;
-
-border-radius: 5px;
-
-
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
 }
 
-/* =========================================
-CONTENT
-========================================= */
-
-.content {
-
-
-width: 90%;
-
-max-width: 750px;
-
-margin:
-    60px auto;
-
-display: flex;
-
-justify-content: center;
-
-
+/* =========================
+   PAGE CONTAINER & HEADER
+========================= */
+.main-container {
+    flex: 1;
+    max-width: 900px;
+    width: 90%;
+    margin: 3.5rem auto 4.5rem auto;
 }
 
-/* =========================================
-CARD
-========================================= */
-
-.card {
-
-
-width: 650px;
-
-max-width: 100%;
-
-background:
-    rgba(255,255,255,0.96);
-
-padding:
-    35px;
-
-border-radius:
-    20px;
-
-border:
-    2px dashed #7b2ff7;
-
-box-shadow:
-    0 15px 35px
-    rgba(0,0,0,0.12);
-
-transition:
-    0.3s;
-
-
+.page-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
 }
 
-.card:hover {
-
-
-transform:
-    translateY(-5px);
-
-box-shadow:
-    0 20px 40px
-    rgba(0,0,0,0.16);
-
-
+.page-heading .title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
 }
 
-/* Heading */
-
-.card h2 {
-
-
-text-align:
-    center;
-
-color:
-    #6f42c1;
-
-font-size:
-    30px;
-
-margin-bottom:
-    30px;
-
-
+.page-heading .subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
 }
 
-/* =========================================
-COURSE
-========================================= */
-
-.course {
-
-
-display: flex;
-
-align-items: center;
-
-gap: 18px;
-
-padding:
-    18px 20px;
-
-margin-bottom:
-    18px;
-
-background:
-    #f1f6fb;
-
-border-left:
-    6px solid #1e73be;
-
-border-radius:
-    10px;
-
-transition:
-    0.3s;
-
-
+/* =========================
+   MAIN CARDS
+========================= */
+.content-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
 }
 
-.course:hover {
-
-
-transform:
-    translateX(7px);
-
-background:
-    #edf2ff;
-
-box-shadow:
-    0 8px 18px
-    rgba(0,0,0,0.08);
-
-
+.main-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 2.4rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Course Icon */
-
-.course-icon {
-
-
-min-width:
-    48px;
-
-height:
-    48px;
-
-display:
-    flex;
-
-align-items:
-    center;
-
-justify-content:
-    center;
-
-font-size:
-    25px;
-
-background:
-    white;
-
-border-radius:
-    50%;
-
-box-shadow:
-    0 4px 10px
-    rgba(0,0,0,0.10);
-
-
+.main-card:hover {
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
 }
 
-/* Course Heading */
-
-.course h3 {
-
-
-margin:
-    0 0 6px 0;
-
-color:
-    #333;
-
-font-size:
-    18px;
-
-
+.floating-badge {
+    position: absolute;
+    top: -24px;
+    right: 28px;
+    width: 54px;
+    height: 54px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 }
 
-/* Course Description */
-
-.course p {
-
-
-margin:
-    0;
-
-font-size:
-    14px;
-
-color:
-    #555;
-
-line-height:
-    1.5;
-
-
+.section-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #9333ea;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.35rem;
+    display: inline-block;
 }
 
-/* =========================================
-DIFFERENT COURSE COLORS
-========================================= */
-
-.course:nth-child(2) {
-
-
-border-left-color:
-    #6f42c1;
-
-
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--purple-primary);
+    margin-bottom: 1.8rem;
 }
 
-.course:nth-child(3) {
-
-
-border-left-color:
-    #e83e8c;
-
-
+/* =========================
+   LIST & SUB-CARDS
+========================= */
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
-.course:nth-child(4) {
-
-
-border-left-color:
-    #20a39e;
-
-
+.item-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.25rem 1.4rem;
+    background: #f8fafc;
+    border-radius: 14px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    border-left: 6px solid #6320a8;
 }
 
-.course:nth-child(5) {
-
-
-border-left-color:
-    #ff8c00;
-
-
+.item-card:hover {
+    transform: translateX(6px);
+    background: #f1f5f9;
 }
 
-/* =========================================
-TABLET
-========================================= */
+/* Colored Left Borders */
+.border-blue { border-left-color: #0284c7; }
+.border-purple { border-left-color: #7c3aed; }
+.border-pink { border-left-color: #db2777; }
+.border-teal { border-left-color: #0d9488; }
+.border-orange { border-left-color: #ea580c; }
 
-@media (max-width: 900px) {
-
-
-.site-name {
-
-    font-size:
-        24px;
+.item-icon {
+    min-width: 44px;
+    height: 44px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
 }
 
-.nav-menu a {
-
-    font-size:
-        13px;
-
-    padding:
-        9px 8px;
+.item-details {
+    flex: 1;
 }
 
-
+.item-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
 }
 
-/* =========================================
-MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-
-
-/* Navbar */
-
-.top-nav {
-
-    min-height:
-        65px;
-
-    padding:
-        15px 20px;
+.item-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-body);
 }
 
-
-.site-name {
-
-    font-size:
-        21px;
+/* =========================
+   BUTTONS (GITHUB & LIVE)
+========================= */
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.9rem;
 }
 
-
-/* Hamburger */
-
-.hamburger {
-
-    display:
-        block;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
 }
 
-
-/* Mobile Menu */
-
-.nav-menu {
-
-    display:
-        none;
-
-    position:
-        absolute;
-
-    top:
-        65px;
-
-    right:
-        15px;
-
-    width:
-        250px;
-
-    flex-direction:
-        column;
-
-    align-items:
-        stretch;
-
-    gap:
-        0;
-
-    background:
-        white;
-
-    border-radius:
-        12px;
-
-    overflow:
-        hidden;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,0.25);
+.btn-github {
+    background: #1e1b4b;
+    color: #ffffff;
 }
 
-
-.nav-menu.show {
-
-    display:
-        flex;
+.btn-github:hover {
+    background: #311158;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(30, 27, 75, 0.25);
 }
 
-
-.nav-menu a {
-
-    color:
-        #333;
-
-    padding:
-        15px 18px;
-
-    font-size:
-        15px;
-
-    border-bottom:
-        1px solid #eee;
-
-    border-radius:
-        0;
+.btn-live {
+    background: var(--purple-light);
+    color: var(--purple-primary);
 }
 
-
-.nav-menu a:hover {
-
-    background:
-        #f3efff;
-
-    color:
-        #7b2ff7;
+.btn-live:hover {
+    background: #e9d5ff;
+    color: #4c1d95;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(99, 32, 168, 0.18);
 }
 
-
-.nav-menu a.active {
-
-    background:
-        #7b2ff7;
-
-    color:
-        white;
-}
-
-
-/* Content */
-
-.content {
-
-    width:
-        94%;
-
-    margin:
-        35px auto;
-}
-
-
-/* Card */
-
-.card {
-
-    width:
-        100%;
-
-    padding:
-        22px;
-
-    border-radius:
-        16px;
-}
-
-
-.card h2 {
-
-    font-size:
-        25px;
-
-    margin-bottom:
-        23px;
-}
-
-
-/* Course */
-
-.course {
-
-    gap:
-        13px;
-
-    padding:
-        15px;
-
-    margin-bottom:
-        15px;
-}
-
-
-.course-icon {
-
-    min-width:
-        42px;
-
-    height:
-        42px;
-
-    font-size:
-        21px;
-}
-
-
-.course h3 {
-
-    font-size:
-        16px;
-}
-
-
-.course p {
-
-    font-size:
-        13px;
-
-    line-height:
-        1.5;
-}
-
-
-}
-
-/* =========================================
-SMALL MOBILE
-========================================= */
-
-@media (max-width: 480px) {
-
-.site-name {
-
-    font-size:
-        19px;
-}
-
-
-.nav-menu {
-
-    width:
-        calc(100% - 30px);
-
-    right:
-        15px;
-}
-
-
-.content {
-
-    width:
-        94%;
-
-    margin:
-        25px auto;
-}
-
-
-.card {
-
-    padding:
-        18px;
-
-    border-radius:
-        14px;
-}
-
-
-.card h2 {
-
-    font-size:
-        22px;
-}
-
-
-.course {
-
-    align-items:
-        flex-start;
-
-    padding:
-        14px;
-
-    gap:
-        12px;
-}
-
-
-.course-icon {
-
-    min-width:
-        38px;
-
-    height:
-        38px;
-
-    font-size:
-        19px;
-}
-
-
-.course h3 {
-
-    font-size:
-        15px;
-}
-
-
-.course p {
-
-    font-size:
-        12.5px;
-}
-
-
-}
+/* =========================
+   FOOTER
+========================= */
 .footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  color: #e9d5ff;
-  font-size: 14px;
-  background: #2e1065;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 1.8rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer span {
-  font-weight: bold;
-  color: #f472b6;
-}.course {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 18px 20px;
-  margin-bottom: 16px;
-  /* Kutty box-ku light contrast dark/grey-pink shade background */
-  background: #f3e8ff; 
-  border-left: 5px solid #7b2ff7;
-  border-radius: 12px;
-  transition: 0.3s;
-}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
 
-.course:hover {
-  transform: translateX(5px);
-  background: #e9d5ff;
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #311158;
+        padding: 1.2rem 5%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .page-heading .title {
+        font-size: 1.8rem;
+    }
+
+    .main-card {
+        padding: 2rem 1.4rem 1.8rem 1.4rem;
+    }
+
+    .floating-badge {
+        top: -20px;
+        right: 18px;
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+    }
+
+    .item-card {
+        gap: 0.9rem;
+        padding: 1.1rem;
+    }
 }
