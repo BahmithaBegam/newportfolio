@@ -422,7 +422,6 @@ body {
         font-size: 1.25rem;
     }
 
-    /* Stack buttons under text on small screens */
     .item-card {
         flex-direction: column;
         align-items: flex-start;

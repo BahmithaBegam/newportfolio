@@ -5,36 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses & Projects | Bahmi's Portfolio</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="courses.css">
 </head>
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================= -->
 <header class="top-nav">
     <div class="site-name">
         ✨ Bahmi's Portfolio
     </div>
 
-    <!-- Hamburger -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
 
-    <!-- Navigation Menu -->
     <nav class="nav-menu" id="hamburgerMenu">
         <a href="index.html">Home</a>
         <a href="skills.html">Skills and Strength</a>
@@ -45,21 +37,15 @@
     </nav>
 </header>
 
-<!-- =========================
-     MAIN CONTENT
-========================= -->
 <main class="main-container">
 
-    <!-- PAGE HEADER -->
     <div class="page-heading">
         <h1 class="title">COURSES & PROJECTS</h1>
         <p class="subtitle">A showcase of technical learning certifications and real-world software builds</p>
     </div>
 
-    <!-- STACK CONTAINER -->
     <div class="content-stack">
 
-        <!-- ================= SECTION 1: COURSES COMPLETED ================= -->
         <section class="main-card">
             <div class="floating-badge">📜</div>
             <span class="section-tag">CERTIFICATIONS</span>
@@ -67,7 +53,6 @@
 
             <div class="items-list">
                 
-                <!-- Course 1 -->
                 <div class="item-card border-blue">
                     <div class="item-icon">💻</div>
                     <div class="item-details">
@@ -75,13 +60,12 @@
                         <p class="item-desc">HTML, CSS, JavaScript & Web Applications - V7 LANCERS</p>
                     </div>
                     <div class="item-action">
-                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/V7.jpeg', 'Web Development - V7 LANCERS')">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('V7.jpeg', 'Web Development – V7 LANCERS')">
                             <i class="fas fa-certificate"></i> View Certificate
                         </button>
                     </div>
                 </div>
 
-                <!-- Course 2 -->
                 <div class="item-card border-purple">
                     <div class="item-icon">🔐</div>
                     <div class="item-details">
@@ -89,13 +73,12 @@
                         <p class="item-desc">Learn basic to Advanced python programming - INTERNPE</p>
                     </div>
                     <div class="item-action">
-                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/python_cert.jpg', 'Python Programming - INTERNPE')">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('PYTHON.jpeg', 'Python Programming – INTERNPE')">
                             <i class="fas fa-certificate"></i> View Certificate
                         </button>
                     </div>
                 </div>
 
-                <!-- Course 3 -->
                 <div class="item-card border-pink">
                     <div class="item-icon">🛡️</div>
                     <div class="item-details">
@@ -103,13 +86,12 @@
                         <p class="item-desc">Designed responsive and user-friendly App pages - TOTAL PLANT ENGINEERING DESIGN</p>
                     </div>
                     <div class="item-action">
-                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/android_cert.jpg', 'Android Application - TOTAL PLANT ENGINEERING')">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('TPED.jpeg', 'Android Application – TOTAL PLANT ENGINEERING')">
                             <i class="fas fa-certificate"></i> View Certificate
                         </button>
                     </div>
                 </div>
 
-                <!-- Course 4 -->
                 <div class="item-card border-teal">
                     <div class="item-icon">☁️</div>
                     <div class="item-details">
@@ -117,13 +99,12 @@
                         <p class="item-desc">Focus on creating content like text, images and code - IBM skillsBuild</p>
                     </div>
                     <div class="item-action">
-                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/genai_cert.jpg', 'Generative AI - IBM SkillsBuild')">
+                        <button type="button" class="btn btn-cert" onclick="openCertModal('Gen AI.jpeg', 'Generative AI – IBM SkillsBuild')">
                             <i class="fas fa-certificate"></i> View Certificate
                         </button>
                     </div>
                 </div>
 
-                <!-- Course 5 -->
                 <div class="item-card border-orange">
                     <div class="item-icon">☕</div>
                     <div class="item-details">
@@ -131,8 +112,8 @@
                         <p class="item-desc">Learn Core Java and Advanced Java Programming - UDEMY</p>
                     </div>
                     <div class="item-action">
-                        <button type="button" class="btn btn-cert" onclick="openCertModal('images/java_cert.jpg', 'Java Programming - UDEMY')">
-                            <i class="fas fa-certificate"></i> View Certificate
+                        <button type="button" class="btn btn-cert" style="opacity: 0.7; cursor: default;">
+                            <i class="fas fa-spinner"></i> Ongoing
                         </button>
                     </div>
                 </div>
@@ -140,7 +121,6 @@
             </div>
         </section>
 
-        <!-- ================= SECTION 2: PROJECTS COMPLETED ================= -->
         <section class="main-card">
             <div class="floating-badge">🚀</div>
             <span class="section-tag">PORTFOLIO WORK</span>
@@ -148,7 +128,6 @@
 
             <div class="items-list">
                 
-                <!-- Project 1: Portfolio -->
                 <div class="item-card border-purple">
                     <div class="item-icon">🌐</div>
                     <div class="item-details">
@@ -161,7 +140,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Restaurant POS -->
                 <div class="item-card border-blue">
                     <div class="item-icon">💳</div>
                     <div class="item-details">
@@ -174,7 +152,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Parent & Community -->
                 <div class="item-card border-orange">
                     <div class="item-icon">🤝</div>
                     <div class="item-details">
@@ -187,7 +164,6 @@
                     </div>
                 </div>
 
-                <!-- Project 4: Zylo E-Commerce -->
                 <div class="item-card border-pink">
                     <div class="item-icon">🛒</div>
                     <div class="item-details">
@@ -200,7 +176,6 @@
                     </div>
                 </div>
 
-                <!-- Project 5: Anemometer -->
                 <div class="item-card border-teal">
                     <div class="item-icon">📱</div>
                     <div class="item-details">
@@ -212,7 +187,6 @@
                     </div>
                 </div>
 
-                <!-- Project 6: Task Management -->
                 <div class="item-card border-purple">
                     <div class="item-icon">📋</div>
                     <div class="item-details">
@@ -232,9 +206,6 @@
 
 </main>
 
-<!-- =========================
-     CERTIFICATE IMAGE MODAL POPUP
-========================= -->
 <div class="cert-modal-overlay" id="certModal" onclick="closeCertModal(event)">
     <div class="cert-modal-card">
         <div class="cert-modal-header">
@@ -247,19 +218,13 @@
     </div>
 </div>
 
-<!-- =========================
-     FOOTER
-========================= -->
 <footer class="footer">
     &copy; 2026 Bahmi | <span id="page-name"></span>
 </footer>
 
-<!-- =========================
-     SCRIPTS
-========================= -->
 <script src="script.js"></script>
 <script>
-    // Certificate Modal Open
+    // Open Certificate Modal
     function openCertModal(imageSrc, title) {
         const modal = document.getElementById('certModal');
         const modalImg = document.getElementById('modalCertImg');
@@ -272,7 +237,7 @@
         }
     }
 
-    // Certificate Modal Close when clicking background
+    // Close Certificate Modal when clicking outside
     function closeCertModal(event) {
         if (event.target.id === 'certModal') {
             document.getElementById('certModal').classList.remove('active');
