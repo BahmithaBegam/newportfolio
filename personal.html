@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details | Bahmi's Portfolio</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>Personal Details</title>
-
-<link rel="stylesheet" href="personal.css">
-
-
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="personal.css">
 </head>
 
 <body>
 
-<!-- =========================
-     NAVBAR`
-========================= -->
+<!-- ================= NAVBAR ================= -->
 <header class="top-nav">
     <div class="site-name">
         Bahmi's Portfolio
@@ -47,100 +43,92 @@
     </nav>
 </header>
 
+<!-- ================= MAIN CONTENT ================= -->
+<main class="main-container">
 
-</header>
-
-<!-- =========================
-     PERSONAL DETAILS
-========================= -->
-
-<main class="content">
-
-
-<div class="card">
-
-    <h2>Personal Details</h2>
-
-
-    <!-- Email -->
-
-    <div class="row">
-
-        <span>Email</span>
-
-        <span>
-            bahmithabegam@gmail.com
-        </span>
-
+    <!-- PAGE HEADER -->
+    <div class="page-heading">
+        <h1 class="title">PERSONAL DETAILS</h1>
+        <p class="subtitle">Individual profile, academic affiliation, and communication information</p>
     </div>
 
+    <!-- 2-BOX GRID -->
+    <div class="details-grid">
 
-    <!-- Mobile -->
+        <!-- CARD 1: Identity & Academic Affiliation -->
+        <section class="detail-card">
+            <div class="floating-icon">🎓</div>
+            <div class="card-content">
+                <span class="card-tag">PROFILE & INSTITUTION</span>
+                <h2 class="card-title">Academic & Identity</h2>
+                
+                <div class="info-rows">
+                    <div class="info-row">
+                        <span class="label">Full Name</span>
+                        <span class="value">Bahmitha Begam K</span>
+                    </div>
 
-    <div class="row">
+                    <div class="info-row">
+                        <span class="label">Degree & Year</span>
+                        <span class="value">B.E. Computer Science & Engineering (4th Year)</span>
+                    </div>
 
-        <span>Mobile Number</span>
+                    <div class="info-row">
+                        <span class="label">Institution</span>
+                        <span class="value">Anna University Regional Campus, Madurai</span>
+                    </div>
 
-        <span>
-            9659713688
-        </span>
+                    <div class="info-row">
+                        <span class="label">Department</span>
+                        <span class="value">Computer Science & Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARD 2: Contact & Location -->
+        <section class="detail-card">
+            <div class="floating-icon">📫</div>
+            <div class="card-content">
+                <span class="card-tag">COMMUNICATION</span>
+                <h2 class="card-title">Contact Information</h2>
+                
+                <div class="info-rows">
+                    <div class="info-row">
+                        <span class="label">Email Address</span>
+                        <span class="value email-text">bahmithabegam@gmail.com</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="label">Mobile Number</span>
+                        <span class="value">+91 96597 13688</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="label">Location</span>
+                        <span class="value">Madurai, Tamil Nadu, India</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="label">Languages Known</span>
+                        <span class="value">English, Tamil</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
-
-
-    <!-- Year & Department -->
-
-    <div class="row">
-
-        <span>Year & Department</span>
-
-        <span>
-            4th & CSE
-        </span>
-
-    </div>
-
-
-    <!-- College -->
-
-    <div class="row">
-
-        <span>College</span>
-
-        <span>
-           Anna University Regional Campus Madurai
-        </span>
-
-    </div>
-
-
-    <!-- Address -->
-
-    <div class="row">
-
-        <span>Address</span>
-
-        <span>
-            Madurai, Tamil Nadu
-        </span>
-
-    </div>
-
-</div>
-
 
 </main>
-<!-- =========================
-     FOOTER
-========================= -->
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     &copy; 2026 Bahmi | <span id="page-name"></span>
 </footer>
 
 <script>
-    // Page URL-a vatchu active page name-a automatic-ah find panrathu
     const path = window.location.pathname;
-    let pageTitle = "Home"; // Default
+    let pageTitle = "Home";
 
     if (path.includes("skills.html")) {
         pageTitle = "Skills and Strength";
@@ -156,14 +144,10 @@
         pageTitle = "Home";
     }
 
-    // Span tag-la antha name-a display panrathu
     document.getElementById("page-name").innerText = pageTitle;
 </script>
-
-<!-- JavaScript -->
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
