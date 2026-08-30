@@ -1,794 +1,287 @@
-/* =========================================
-RESET
-========================================= */
+:root {
+    --bg-gradient-start: #311158;
+    --bg-gradient-end: #1e0938;
+    --card-bg: #ffffff;
+    --text-dark: #1e1b4b;
+    --text-body: #4b5563;
+    --text-muted: #6b7280;
+    --purple-primary: #6320a8;
+    --purple-light: #f3e8ff;
+    --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-
-
-font-family:
-    'Segoe UI',
-    Arial,
-    sans-serif;
-
-min-height: 100vh;
-
- background: linear-gradient(135deg, #2e1065 0%, #3b0764 50%, #1e1b4b 100%);
-
-color: #333;
-
-
+    font-family: var(--font-main);
+    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
-/* =========================================
-NAVBAR
-========================================= */
-
+/* =========================
+   NAVBAR (Matching Gradient)
+========================= */
 .top-nav {
-
-
-width: 100%;
-
-min-height: 70px;
-
-display: flex;
-
-align-items: center;
-
-justify-content: space-between;
-
-padding:
-    15px 30px;
-
-background:
-    linear-gradient(
-        90deg,
-        #7b2ff7,
-        #f107a3,
-        #00c6ff
-    );
-
-box-shadow:
-    0 4px 15px
-    rgba(0,0,0,0.2);
-
-position: sticky;
-
-top: 0;
-
-z-index: 1000;
-
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 5%;
+    background: linear-gradient(90deg, #9b1fe9 0%, #d91485 50%, #4361ee 100%);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
-
-/* Portfolio Name */
 
 .site-name {
-
-
-color: white;
-
-font-size: 28px;
-
-font-weight: bold;
-
-
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
-/* Desktop Navigation */
-
 .nav-menu {
-
-
-display: flex;
-
-align-items: center;
-
-gap: 5px;
-
-
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 }
 
 .nav-menu a {
-
-
-text-decoration: none;
-
-color: white;
-
-font-size: 14px;
-
-padding:
-    10px 12px;
-
-border-radius: 8px;
-
-transition:
-    0.3s;
-
-
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 20px;
+    transition: all 0.25s ease;
 }
 
 .nav-menu a:hover {
-
-
-background:
-    rgba(255,255,255,0.2);
-
-
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-menu a.active {
-
-
-background: white;
-
-color: #7b2ff7;
-
-font-weight: bold;
-
-
+    background: #ffffff;
+    color: var(--purple-primary);
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================================
-HAMBURGER
-========================================= */
-
 .hamburger {
-
-
-display: none;
-
-width: 32px;
-
-cursor: pointer;
-
-
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .hamburger span {
-
-
-display: block;
-
-height: 3px;
-
-margin: 6px 0;
-
-background: white;
-
-border-radius: 5px;
-
-
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
 }
 
-/* =========================================
-ACADEMIC SECTION
-========================================= */
-
-.academic-section {
-
-
-width: 90%;
-
-max-width: 750px;
-
-margin:
-    55px auto;
-
-padding:
-    10px;
-
-
+/* =========================
+   PAGE CONTAINER & HEADER
+========================= */
+.main-container {
+    flex: 1;
+    max-width: 860px;
+    width: 90%;
+    margin: 3.5rem auto 4.5rem auto;
 }
 
-/* =========================================
-TITLE
-========================================= */
-
-.title {
-
-
-text-align: center;
-
-font-size: 38px;
-
-color:
-    #4b1d7a;
-
-margin-bottom:
-    10px;
-
-
+.page-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
 }
 
-.tagline {
-
-
-text-align: center;
-
-color:
-    #666;
-
-margin-bottom:
-    55px;
-
-font-size: 16px;
-
-line-height: 1.6;
-
-
+.page-heading .title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
 }
 
-/* =========================================
-EDUCATION CARD
-========================================= */
+.page-heading .subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+}
+
+/* =========================
+   ACADEMIC CARDS
+========================= */
+.academic-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
 
 .edu-card {
-
-
-background:
-    #ffffff;
-
-padding:
-    30px;
-
-border-radius:
-    20px;
-
-margin-bottom:
-    40px;
-
-position:
-    relative;
-
-transition:
-    0.4s;
-
-overflow:
-    visible;
-
-
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 2.4rem 2.4rem 2.2rem 2.4rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .edu-card:hover {
-
-
-transform:
-    translateY(-8px)
-    scale(1.01);
-
-
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
 }
-
-/* =========================================
-ICON
-========================================= */
-
-.icon {
-
-
-position:
-    absolute;
-
-top:
-    -25px;
-
-right:
-    25px;
-
-font-size:
-    40px;
-
-background:
-    #ffffff;
-
-padding:
-    10px;
-
-border-radius:
-    50%;
-
-box-shadow:
-    0 5px 15px
-    rgba(0,0,0,0.12);
-
-
-}
-
-/* =========================================
-TEXT
-========================================= */
-
-.edu-card h2 {
-
-
-font-size:
-    26px;
-
-margin-bottom:
-    8px;
-
-
-}
-
-.edu-card h4 {
-
-
-color:
-    #444;
-
-margin-bottom:
-    7px;
-
-line-height:
-    1.5;
-
-
-}
-
-.edu-card span {
-
-
-font-size:
-    14px;
-
-color:
-    #888;
-
-
-}
-
-.edu-card p {
-
-
-margin-top:
-    16px;
-
-line-height:
-    1.7;
-
-color:
-    #555;
-
-font-size:
-    15px;
-
-
-}
-
-/* =========================================
-SCHOOL CARD
-========================================= */
 
 .school-card {
-
-
-border-left:
-    6px solid #6f42c1;
-
-box-shadow:
-    0 12px 35px
-    rgba(111,66,193,0.35);
-
-
+    border-left: 6px solid #6f42c1;
 }
-
-.school-card h2 {
-
-
-color:
-    #6f42c1;
-
-
-}
-
-/* =========================================
-COLLEGE CARD
-========================================= */
 
 .college-card {
-
-
-border-left:
-    6px solid #e83e8c;
-
-box-shadow:
-    0 12px 35px
-    rgba(232,62,140,0.35);
-
-
+    border-left: 6px solid #e83e8c;
 }
 
-.college-card h2 {
-
-
-color:
-    #e83e8c;
-
-
+/* Floating Circular Badge */
+.floating-icon {
+    position: absolute;
+    top: -24px;
+    right: 28px;
+    width: 54px;
+    height: 54px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 }
 
-/* =========================================
-TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-
-.site-name {
-
-    font-size:
-        24px;
+.card-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #9333ea;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.4rem;
+    display: inline-block;
 }
 
-.nav-menu a {
-
-    font-size:
-        13px;
-
-    padding:
-        9px 8px;
+.school-card .card-title {
+    color: #6f42c1;
 }
 
-
+.college-card .card-title {
+    color: #e83e8c;
 }
 
-/* =========================================
-MOBILE
-========================================= */
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+}
 
+.institution-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+/* SCORE & DURATION PILLS */
+.score-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.score-pill {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #5b21b6;
+    background: var(--purple-light);
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+}
+
+.cgpa-highlight {
+    color: #9d174d;
+    background: #fce7f3;
+}
+
+.duration-pill {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: #f1f5f9;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+}
+
+.card-desc {
+    font-size: 0.94rem;
+    line-height: 1.7;
+    color: var(--text-body);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    padding: 1.8rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 @media (max-width: 768px) {
-
-
-/* Navbar */
-
-.top-nav {
-
-    min-height:
-        65px;
-
-    padding:
-        15px 20px;
-}
-
-.site-name {
-
-    font-size:
-        21px;
-}
-
-
-/* Hamburger */
-
-.hamburger {
-
-    display:
-        block;
-}
-
-
-/* Mobile Menu */
-
-.nav-menu {
-
-    display:
-        none;
-
-    position:
-        absolute;
-
-    top:
-        65px;
-
-    right:
-        15px;
-
-    width:
-        250px;
-
-    flex-direction:
-        column;
-
-    align-items:
-        stretch;
-
-    gap:
-        0;
-
-    background:
-        white;
-
-    border-radius:
-        12px;
-
-    overflow:
-        hidden;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,0.25);
-}
-
-
-.nav-menu.show {
-
-    display:
-        flex;
-}
-
-
-.nav-menu a {
-
-    color:
-        #333;
-
-    padding:
-        15px 18px;
-
-    font-size:
-        15px;
-
-    border-bottom:
-        1px solid #eee;
-
-    border-radius:
-        0;
-}
-
-
-.nav-menu a:hover {
-
-    background:
-        #f3efff;
-
-    color:
-        #7b2ff7;
-}
-
-
-.nav-menu a.active {
-
-    background:
-        #7b2ff7;
-
-    color:
-        white;
-}
-
-
-/* Academic */
-
-.academic-section {
-
-    width:
-        94%;
-
-    margin:
-        35px auto;
-
-    padding:
-        5px;
-}
-
-
-/* Title */
-
-.title {
-
-    font-size:
-        29px;
-
-    line-height:
-        1.3;
-}
-
-.tagline {
-
-    font-size:
-        14px;
-
-    margin-bottom:
-        45px;
-}
-
-
-/* Cards */
-
-.edu-card {
-
-    padding:
-        22px;
-
-    margin-bottom:
-        35px;
-
-    border-radius:
-        16px;
-}
-
-
-.edu-card h2 {
-
-    font-size:
-        23px;
-}
-
-
-.edu-card h4 {
-
-    font-size:
-        14px;
-}
-
-
-.edu-card p {
-
-    font-size:
-        14px;
-
-    line-height:
-        1.7;
-}
-
-
-/* Icon */
-
-.icon {
-
-    top:
-        -20px;
-
-    right:
-        18px;
-
-    font-size:
-        30px;
-
-    padding:
-        8px;
-}
-
-
-}
-
-/* =========================================
-SMALL MOBILE
-========================================= */
-
-@media (max-width: 480px) {
-
-
-.site-name {
-
-    font-size:
-        19px;
-}
-
-.nav-menu {
-
-    width:
-        calc(100% - 30px);
-
-    right:
-        15px;
-}
-
-
-.academic-section {
-
-    width:
-        94%;
-
-    margin:
-        30px auto;
-}
-
-
-.title {
-
-    font-size:
-        26px;
-}
-
-
-.tagline {
-
-    font-size:
-        13px;
-
-    margin-bottom:
-        40px;
-}
-
-
-.edu-card {
-
-    padding:
-        18px;
-
-    border-radius:
-        14px;
-}
-
-
-.edu-card h2 {
-
-    font-size:
-        21px;
-}
-
-
-.edu-card h4 {
-
-    font-size:
-        13px;
-}
-
-
-.edu-card span {
-
-    font-size:
-        12px;
-}
-
-
-.edu-card p {
-
-    font-size:
-        13px;
-}
-
-
-.icon {
-
-    font-size:
-        26px;
-
-    padding:
-        7px;
-
-    right:
-        15px;
-}
-
-
-}.footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  color: #e9d5ff;
-  font-size: 14px;
-  background: #2e1065;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer span {
-  font-weight: bold;
-  color: #f472b6;
-}/* =========================================
-ACADEMIC PAGE TITLE & TAGLINE (White Text Fix)
-========================================= */
-
-.academic-section .title {
-  color: #ffffff; /* Bright white title */
-  text-align: center;
-  font-size: 34px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.academic-section .tagline {
-  color: #e9d5ff; /* Light purple/lavender subtitle */
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 40px;
-  font-weight: 400;
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #311158;
+        padding: 1.2rem 5%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .page-heading .title {
+        font-size: 1.8rem;
+    }
+
+    .edu-card {
+        padding: 2rem 1.4rem 1.8rem 1.4rem;
+    }
+
+    .floating-icon {
+        top: -20px;
+        right: 18px;
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+    }
 }
