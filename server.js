@@ -19,22 +19,24 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB Atlas successfully!'))
   .catch((err) => console.error('MongoDB Connection Failed:', err));
 
-// Initialize Resend with API Key from Environment Variables
+// Initialize Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Contact Form Endpoint (Saves to MongoDB AND Sends Email using Resend)
+// Contact Form Endpoint
 app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
-    
+
     // 1. Save to MongoDB Database
     const newContact = new Contact({ name, email, subject, message });
     await newContact.save();
+    console.log('Saved to MongoDB successfully!');
 
     // 2. Send Email using Resend API
-    const data = await resend.emails.send({
+    const response = await resend.emails.send({
       from: 'Portfolio <onboarding@resend.dev>',
-      to: process.env.EMAIL_USER, // Ungaloda Gmail address Render environment variable-il iruppathu moolamaga inga work aagum
+      to: process.env.EMAIL_USER,
+      reply_to: email, // Direct-ah client email-ku reply panna
       subject: `New Portfolio Message: ${subject || 'No Subject'}`,
       html: `
         <h3>You have a new message from your portfolio contact form:</h3>
@@ -45,12 +47,18 @@ app.post('/api/contact', async (req, res) => {
       `
     });
 
-    console.log('Email sent successfully:', data);
-    res.status(201).json({ success: true, message: 'Message sent, saved, and emailed successfully!' });
-  
+    // Resend SDK error handling
+    if (response.error) {
+      console.error('Resend API Error:', response.error);
+      return res.status(400).json({ success: false, error: response.error });
+    }
+
+    console.log('Email sent successfully:', response.data);
+    return res.status(201).json({ success: true, message: 'Message sent and emailed successfully!' });
+
   } catch (error) {
     console.error('Error handling contact message:', error);
-    res.status(500).json({ success: false, message: 'Server error, please try again later.' });
+    return res.status(500).json({ success: false, message: 'Server error, please try again later.' });
   }
 });
 
